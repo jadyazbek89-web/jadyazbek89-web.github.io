@@ -5,4 +5,7 @@ qa2/
 audit/
 *.py
 *.png
+*.jpeg
+.playwright-mcp/
 __pycache__/
+Prompt.docx
