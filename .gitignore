@@ -2,5 +2,7 @@ CLAUDE.md
 index_v1_backup.html
 qa/
 qa2/
+audit/
 *.py
+*.png
 __pycache__/
