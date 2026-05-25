@@ -514,9 +514,10 @@
         .yt-card:hover { background:var(--black-4); transform:translateY(-4px); box-shadow:0 20px 56px rgba(0,0,0,.5); }
         .yt-card.yt-first { border:1px solid rgba(255,200,50,.15); }
         .first-badge {
-            background:linear-gradient(135deg,rgba(255,200,50,.12),rgba(255,150,0,.08));
+            position:absolute; top:0; left:0; right:0; z-index:2;
+            background:linear-gradient(135deg,rgba(255,200,50,.18),rgba(255,150,0,.12));
             color:#ffc832; font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
-            padding:8px 20px; border-bottom:1px solid rgba(255,200,50,.12);
+            padding:8px 20px;
         }
         .yt-thumb { position:relative; overflow:hidden; aspect-ratio:16/9; background:var(--black-4); }
         .yt-thumb img { width:100%; height:100%; object-fit:cover; transition:transform .5s; display:block; }
@@ -941,8 +942,8 @@
                         </div>
                     </div>
                     <div class="yt-card yt-first rev d1">
-                        <div class="first-badge">★ Industry First · Arab World</div>
                         <div class="yt-thumb">
+                            <div class="first-badge">★ Industry First · Arab World</div>
                             <img src="https://img.youtube.com/vi/y9aPKUbnrn0/maxresdefault.jpg" alt="Nassif Zeytoun - Sallemi" loading="lazy" style="object-position:center center;">
                             <a href="https://youtu.be/y9aPKUbnrn0" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
                         </div>
