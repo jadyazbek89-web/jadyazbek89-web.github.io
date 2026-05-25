@@ -1,0 +1,6 @@
+CLAUDE.md
+index_v1_backup.html
+qa/
+qa2/
+*.py
+__pycache__/
