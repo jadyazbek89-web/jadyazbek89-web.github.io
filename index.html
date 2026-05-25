@@ -273,31 +273,7 @@
         .s-counting { font-family:var(--sans); font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(--teal); margin-top:5px; font-weight:500; }
         .s-detail { font-family:var(--sans); font-size:11px; color:var(--white-30); margin-top:6px; font-style:italic; }
 
-        /* CAMPAIGNS */
-        .campaigns { background:var(--black-2); }
-        .camp-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; }
-        @media (max-width:768px) { .camp-grid { grid-template-columns:1fr; } }
-        .c-card {
-            background:var(--black-3); padding:52px 44px;
-            transition:transform .4s, background .4s, box-shadow .4s;
-            position:relative; overflow:hidden;
-        }
-        .c-card:hover { background:var(--black-4); transform:translateY(-6px); box-shadow:0 24px 64px rgba(0,0,0,.55); }
-        .c-card::after {
-            content:''; position:absolute; bottom:0; left:0; right:0; height:1px;
-            background:linear-gradient(to right,var(--purple),var(--teal),transparent);
-            transform:scaleX(0); transform-origin:left; transition:transform .4s;
-        }
-        .c-card:hover::after { transform:scaleX(1); }
-        .c-meta { display:flex; align-items:center; gap:12px; margin-bottom:22px; }
-        .c-tag {
-            font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
-            color:var(--teal); padding:4px 10px; border:1px solid rgba(45,212,191,.3);
-        }
-        .c-year { font-size:11px; color:var(--white-30); }
-        .c-title { font-family:var(--serif); font-size:1.75rem; font-weight:600; line-height:1.18; color:var(--white); margin-bottom:8px; }
-        .c-result { font-size:1rem; font-weight:400; color:var(--teal); margin-bottom:18px; }
-        .c-desc { font-size:13.5px; color:var(--white-60); line-height:1.75; }
+        /* SHARED LINK STYLE (used by yt-card) */
         .c-link {
             display:inline-block; margin-top:16px;
             font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
@@ -306,7 +282,6 @@
             transition:border-color .25s, opacity .25s;
         }
         .c-link:hover { border-color:var(--teal); opacity:.8; }
-        .c-links { display:flex; flex-wrap:wrap; gap:16px; margin-top:16px; }
 
         /* FIRSTS */
         .firsts { background:var(--black); }
@@ -337,8 +312,6 @@
         .f-title { font-family:var(--serif); font-size:1.55rem; font-weight:600; line-height:1.22; color:var(--white); margin-bottom:16px; }
         .f-campaign { font-size:11px; font-weight:500; letter-spacing:.15em; text-transform:uppercase; color:var(--teal); margin-bottom:14px; }
         .f-desc { font-size:13.5px; color:var(--white-60); line-height:1.75; }
-        .firsts-tagline { text-align:center; margin-top:56px; }
-        .firsts-tagline p { font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--white-30); }
 
         /* TIMELINE */
         .tl-wrap { position:relative; padding-left:40px; }
@@ -414,6 +387,8 @@
             max-width:780px; margin-left:auto; margin-right:auto;
         }
         .contact-hl em { color:var(--teal); font-style:normal; }
+        .contact-tail { white-space:nowrap; }
+        @media (max-width:768px) { .contact-tail { white-space:normal; } }
         .contact-sub { font-size:14px; color:var(--white-60); margin-bottom:48px; }
         .contact-phones { display:flex; justify-content:center; gap:44px; margin-bottom:36px; flex-wrap:wrap; }
         .cp { font-size:14px; color:var(--white-60); letter-spacing:.04em; }
@@ -470,6 +445,7 @@
         }
         .brand-badge:hover { color:var(--white); border-color:rgba(45,212,191,.4); background:rgba(45,212,191,.06); }
         .brand-badge.hl { border-color:rgba(45,212,191,.25); color:rgba(45,212,191,.8); }
+        .brands-langs { text-align:center; font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--white-30); margin-top:32px; }
 
         /* PHILOSOPHY */
         .phil-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:0; }
@@ -678,7 +654,6 @@
             .tl-inner { padding:20px; }
             .f-card { padding:40px 28px; }
             .f-num { font-size:3.5rem; top:20px; right:20px; }
-            .c-card { padding:36px 28px; }
             .contact { padding:80px 0; }
             .contact-hl { margin-bottom:16px; }
             .contact-phones { gap:24px; }
@@ -747,14 +722,6 @@
         .cs-result-num { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); font-weight:700; color:var(--teal); line-height:1; margin-bottom:10px; }
         .cs-result-label { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--white-60); }
 
-        /* SOCIAL PROOF QUOTE */
-        .quote-section { background:var(--black-3); padding:88px 0; }
-        .quote-inner { max-width:760px; margin:0 auto; text-align:center; padding:0 40px; }
-        .quote-mark { font-family:var(--serif); font-size:6rem; line-height:.5; color:rgba(45,212,191,.2); display:block; margin-bottom:28px; }
-        .quote-text { font-family:var(--serif); font-size:clamp(1.1rem,2.5vw,1.45rem); font-weight:300; font-style:italic; color:var(--white); line-height:1.7; margin-bottom:32px; }
-        .quote-source { font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--teal); }
-        .quote-placeholder { font-size:12px; color:var(--white-30); font-style:italic; }
-
         /* PRINT */
         @media print {
             #nav,#cur,#cur-ring,#prog,#btt,#loader { display:none !important; }
@@ -764,8 +731,8 @@
             .hero-name { color:#111 !important; -webkit-text-fill-color:#111 !important; font-size:2.8rem !important; white-space:normal !important; }
             .hero-rot-wrap, .cta, .avail-chip { display:none !important; }
             section { background:#fff !important; }
-            .f-card, .c-card, .s-card, .tl-head { background:#f5f5f5 !important; }
-            .h-display, .tl-role, .f-title, .c-title, .edu-deg { color:#111 !important; }
+            .f-card, .s-card { background:#f5f5f5 !important; }
+            .h-display, .f-title { color:#111 !important; }
             * { animation:none !important; transition:none !important; }
             .rev { opacity:1 !important; transform:none !important; }
             .tl-body { max-height:600px !important; }
@@ -787,7 +754,7 @@
         <div class="nav-wrap">
             <a href="#top" class="nav-logo">JY</a>
             <div class="nav-links" id="navLinks">
-                <a href="#campaigns">Work</a>
+                <a href="#case-study">Work</a>
                 <a href="#showcase">Showcase</a>
                 <a href="#firsts">Firsts</a>
                 <a href="#philosophy">Approach</a>
@@ -812,12 +779,12 @@
             <p class="hero-sup l2">Senior Marketing Strategist</p>
             <h1 class="hero-name l3">Jad Yazbeck</h1>
             <p class="hero-hook l3a">The strategist behind the Arab world's first Instagram Reel, MENA's first TikTok campaign, Qatar Tourism's <strong>100M+ reach</strong>, and&nbsp;<strong>602M+ YouTube views</strong>.</p>
-            <p class="hero-tag l4">8+ years leading paid media, platform partnerships, and&nbsp;cross-functional teams across tourism, live events, and&nbsp;consumer brands in MENA. From strategy through execution, at FIFA World Cup scale.</p>
+            <p class="hero-tag l4">8+ years leading paid media, platform partnerships, and&nbsp;cross-functional teams across tourism, live events, and&nbsp;consumer brands in MENA.</p>
             <div class="hero-rot-wrap l5">
                 <span class="hero-rot" id="rotWord">Strategist.</span>
             </div>
             <div class="hero-btns l6">
-                <a href="#campaigns" class="cta"><span>View My Work</span></a>
+                <a href="#case-study" class="cta"><span>View My Work</span></a>
                 <a href="Jad Yazbeck Resume.pdf" download class="btn-o" style="padding:13px 32px;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;">Download CV</a>
             </div>
         </div>
@@ -828,23 +795,23 @@
         <div class="s-card rev">
             <div class="s-num"><span class="counter" data-target="100" data-suffix="M+">0</span></div>
             <p class="s-label">Campaign Reach</p>
-            <p class="s-detail">Visit Qatar · Meta, TikTok &amp; Snapchat</p>
+            <p class="s-detail">Visit Qatar</p>
         </div>
         <div class="s-card rev d1">
             <div class="s-num"><span class="counter" data-target="602" data-suffix="M+">0</span></div>
             <p class="s-label">Video Views</p>
             <p class="s-counting">and counting</p>
-            <p class="s-detail">Men Awel Dekika · Elissa &amp; Saad Lamjarred · YouTube</p>
+            <p class="s-detail">Men Awel Dekika</p>
         </div>
         <div class="s-card rev d2">
             <div class="s-num"><span class="counter" data-target="8" data-suffix="+">0</span></div>
             <p class="s-label">Years Experience</p>
-            <p class="s-detail">Across MENA &amp; GCC Markets</p>
+            <p class="s-detail">MENA &amp; GCC</p>
         </div>
         <div class="s-card rev d3">
             <div class="s-num"><span class="counter" data-target="15" data-suffix="+">0</span></div>
             <p class="s-label">Team Members Led</p>
-            <p class="s-detail">Cross-Functional Team · Music Is My Life × Watary</p>
+            <p class="s-detail">Cross-functional</p>
         </div>
     </div>
 
@@ -861,62 +828,19 @@
                     <div class="known-num">01</div>
                     <div class="known-stat">3 Firsts</div>
                     <h3 class="known-title">I move before the playbook exists.</h3>
-                    <p class="known-body">First TikTok campaign in the MENA region. First Instagram Reel in the Arab world. YouTube-recognized red carpet concept. I've built the blueprint others later followed, before any platform had instructions for it.</p>
+                    <p class="known-body">First TikTok campaign in MENA. First Instagram Reel in the Arab world. YouTube-recognized red carpet concept. I built the blueprint others later copied.</p>
                 </div>
                 <div class="known-card rev d1">
                     <div class="known-num">02</div>
                     <div class="known-stat">602M+</div>
                     <h3 class="known-title">I scale numbers that make headlines.</h3>
-                    <p class="known-body">602M+ video views. 100M+ campaign reach. These are the result of precision audience targeting, multi-platform strategy, and&nbsp;direct partnerships with Meta, YouTube, and&nbsp;TikTok. Not luck.</p>
+                    <p class="known-body">602M+ video views. 100M+ campaign reach. Direct partnerships with Meta, YouTube, and&nbsp;TikTok. Engineered, not lucky.</p>
                 </div>
                 <div class="known-card rev d2">
                     <div class="known-num">03</div>
                     <div class="known-stat">15+ People</div>
                     <h3 class="known-title">I deliver at the world's biggest stages.</h3>
-                    <p class="known-body">FIFA World Cup Qatar 2022. PSG collab. Spotify EQUAL Arabia. Charlotte Tilbury. When the stakes are highest, I've been the one running the strategy, leading cross-functional teams across markets.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CAMPAIGNS -->
-    <section class="sec campaigns" id="campaigns">
-        <div class="wrap">
-            <div class="rev" style="margin-bottom:52px;">
-                <p class="eyebrow">Selected Work</p>
-                <h2 class="h-display">Featured Campaigns</h2>
-                <div class="bar"></div>
-            </div>
-            <div class="camp-grid">
-                <div class="c-card rev">
-                    <div class="c-meta"><span class="c-tag">Tourism · GCC</span><span class="c-year">Multi-year</span></div>
-                    <h3 class="c-title">Visit Qatar</h3>
-                    <p class="c-result">100M+ Reach</p>
-                    <p class="c-desc">Multi-channel tourism campaign across Meta, TikTok, and&nbsp;Snapchat. Delivered 100M+ reach through localized content strategy, real-time trend execution, and&nbsp;precision audience targeting across GCC markets.</p>
-                </div>
-                <div class="c-card rev d1">
-                    <div class="c-meta"><span class="c-tag">Digital Campaign</span><span class="c-year">Record-Breaking</span></div>
-                    <h3 class="c-title">Men Awel Dekika</h3>
-                    <p class="c-result">602M+ Views</p>
-                    <p class="c-desc">Full-ecosystem campaign integrating social, streaming, and offline channels. Managed platform partnerships across YouTube, Spotify, and&nbsp;Anghami, making it one of the most-streamed Arabic-language releases globally.</p>
-                    <a href="https://www.youtube.com/watch?v=O--o-O-ABBw" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
-                </div>
-                <div class="c-card rev d2">
-                    <div class="c-meta"><span class="c-tag">Viral Campaign</span><span class="c-year">Historic</span></div>
-                    <h3 class="c-title">Sallemi Dance Challenge</h3>
-                    <p class="c-result">MENA's First TikTok Collaboration</p>
-                    <p class="c-desc">Designed and launched a viral UGC campaign before TikTok playbooks existed. Built challenge mechanics that drove organic regional reach and set the template for influencer campaigns across the Arab world.</p>
-                    <div class="c-links">
-                        <a href="https://vt.tiktok.com/ZSxypXVTa/" target="_blank" rel="noopener" class="c-link">Teaser ↗</a>
-                        <a href="https://vt.tiktok.com/ZSxypQBmP/" target="_blank" rel="noopener" class="c-link">Music Video ↗</a>
-                        <a href="https://vt.tiktok.com/ZSxys1D9Q/" target="_blank" rel="noopener" class="c-link">Challenge ↗</a>
-                    </div>
-                </div>
-                <div class="c-card rev d3">
-                    <div class="c-meta"><span class="c-tag">Live Events · B2C</span><span class="c-year">Multi-platform</span></div>
-                    <h3 class="c-title">International Events</h3>
-                    <p class="c-result">Real-time Multi-platform Execution</p>
-                    <p class="c-desc">End-to-end digital coverage for Travis Scott, Ed Sheeran, Michael Bublé, Qatar Food Festival, ITTF tournaments, Charlotte Tilbury, and&nbsp;FIFA activations. Live content ops, audience engagement, and&nbsp;platform distribution at scale.</p>
+                    <p class="known-body">FIFA World Cup 2022. PSG. Spotify EQUAL Arabia. Charlotte Tilbury. When stakes are highest, I lead the strategy and the team running it.</p>
                 </div>
             </div>
         </div>
@@ -938,35 +862,38 @@
                         <span class="cs-tag">Multi-year</span>
                         <span class="cs-tag">Meta · TikTok · Snapchat</span>
                     </div>
-                    <p class="cs-intro">Qatar Tourism needed to position Qatar as a premier travel destination across GCC and international markets: a country with world-class infrastructure, major sporting events, and&nbsp;lifestyle experiences that most audiences hadn't yet considered. The challenge: build sustained digital presence that felt native, not broadcast, across three platforms simultaneously.</p>
+                    <p class="cs-intro">Qatar Tourism needed to position the country as a premier travel destination across GCC and international markets. The challenge: build sustained digital presence that felt native, not broadcast, across three platforms simultaneously.</p>
                 </div>
                 <div>
                     <p class="cs-intro"><strong>As Account Director, I owned the full digital strategy:</strong> channel planning, content architecture, paid media execution, creator coordination, and&nbsp;real-time optimization. From PSG athlete collabs to seasonal tourism pushes, every content decision connected back to one goal: drive Qatar into the travel consideration set.</p>
-                    <p class="cs-intro" style="color:rgba(45,212,191,.5);font-size:12px;">[JAD TO FILL: Add any additional scope detail: budget range, team size, or specific deliverables you're comfortable sharing.]</p>
                 </div>
             </div>
             <div class="cs-grid rev d1">
                 <div class="cs-block">
                     <p class="cs-label">The Challenge</p>
-                    <p class="cs-content">Break into the GCC leisure travel market against established competitors, while managing bilingual content (Arabic + English) across segments including families, sports fans, and&nbsp;culture seekers, on three platforms with different audiences and formats.</p>
+                    <p class="cs-content">Break into the GCC leisure travel market against established competitors, managing bilingual content (Arabic + English) across families, sports fans, and&nbsp;culture seekers, on three platforms with different audiences and formats.</p>
                 </div>
                 <div class="cs-block">
                     <p class="cs-label">The Strategy</p>
-                    <p class="cs-content"><strong>Audience-first content pillars:</strong> Culture, sports, food, and adventure, each mapped to platform and audience segment. <strong>Platform-native formats:</strong> Short-form reels for TikTok, carousel storytelling for Meta, influencer-led content for Snapchat. <strong>Event-driven amplification:</strong> PSG collab, FIFA, Qatar Food Festival: real moments turned into always-on reach.</p>
+                    <p class="cs-content"><strong>Audience-first content pillars:</strong> Culture, sports, food, adventure, each mapped to platform and segment. <strong>Platform-native formats:</strong> reels for TikTok, carousels for Meta, influencer-led for Snapchat. <strong>Event-driven amplification:</strong> PSG, FIFA, Qatar Food Festival, real moments turned into always-on reach.</p>
                 </div>
                 <div class="cs-block">
                     <p class="cs-label">The Execution</p>
-                    <p class="cs-content">Coordinated content across PSG athletes, local creators, and Qatar Tourism's internal teams. Managed real-time paid media across three platforms with continuous A/B optimization. Delivered bilingual campaigns with localized targeting by market, language, and intent stage. Maintained brand consistency at scale across a multi-year engagement.</p>
+                    <p class="cs-content">Coordinated content across PSG athletes, local creators, and&nbsp;Qatar Tourism's internal teams. Managed real-time paid media across three platforms with continuous A/B optimization. Bilingual campaigns, localized targeting, multi-year brand consistency at scale.</p>
                 </div>
             </div>
-            <div class="cs-results rev d2" style="grid-template-columns:repeat(2,1fr);">
+            <div class="cs-results rev d2">
                 <div class="cs-result-card">
                     <div class="cs-result-num">100M+</div>
                     <p class="cs-result-label">Campaign Reach</p>
                 </div>
                 <div class="cs-result-card">
-                    <div class="cs-result-num">3</div>
-                    <p class="cs-result-label">Platforms: Meta, TikTok & Snapchat</p>
+                    <div class="cs-result-num">PSG</div>
+                    <p class="cs-result-label">Branded Partnership</p>
+                </div>
+                <div class="cs-result-card">
+                    <div class="cs-result-num">Multi-year</div>
+                    <p class="cs-result-label">Account Leadership</p>
                 </div>
             </div>
         </div>
@@ -982,13 +909,13 @@
                 <p style="font-size:14px;color:var(--white-60);max-width:620px;line-height:1.8;">A selection of campaigns and projects across brand activations, platform partnerships, and tourism, from strategy through execution.</p>
             </div>
 
-            <!-- MUSIC IS MY LIFE × WATARY -->
+            <!-- ENTERTAINMENT & LIVE EVENTS -->
             <div style="margin-bottom:96px;">
                 <div class="rev">
                     <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap;">
-                        <h3 class="showcase-sub-title">Music Is My Life × Watary</h3>
+                        <h3 class="showcase-sub-title">Entertainment &amp; Live Events</h3>
                     </div>
-                    <p class="showcase-sub-desc">Social media strategy, campaign management &amp; platform activations across MENA.</p>
+                    <p class="showcase-sub-desc">Social strategy, campaign management &amp; platform activations across MENA.</p>
                     <div class="collab-proof">
                         <div class="collab-photo"><img src="images/jad-nassif.jpg" alt="Jad Yazbeck with Nassif Zeytoun" loading="lazy" style="object-position:center 65%;"></div>
                         <div class="collab-photo"><img src="images/jad-alshami.jpg" alt="Jad Yazbeck with Al Shami" loading="lazy" style="object-position:center 65%;"></div>
@@ -996,17 +923,18 @@
                     </div>
                 </div>
                 <div class="yt-grid">
-                    <div class="yt-card rev">
+                    <div class="yt-card yt-first rev">
                         <div class="yt-thumb">
-                            <img src="https://img.youtube.com/vi/O--o-O-ABBw/maxresdefault.jpg" alt="Elissa & Saad Lamjarred - Min Awel Dekika" loading="lazy">
-                            <a href="https://www.youtube.com/watch?v=O--o-O-ABBw" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
+                            <div class="first-badge">★ Industry First · Arab World</div>
+                            <img src="https://img.youtube.com/vi/y9aPKUbnrn0/maxresdefault.jpg" alt="Nassif Zeytoun - Sallemi" loading="lazy" style="object-position:center center;">
+                            <a href="https://youtu.be/y9aPKUbnrn0" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
                         </div>
                         <div class="yt-info">
-                            <div class="yt-meta"><span class="yt-tag">Record-Breaking</span><span class="yt-year">2022</span></div>
-                            <h4 class="yt-title">Elissa &amp; Saad Lamjarred · Min Awel Dekika</h4>
-                            <p class="yt-result">602M+ Views · International Reach</p>
-                            <p class="yt-desc">Led the end-to-end social media marketing strategy for one of the most-streamed releases of 2022. The #MinAwelDekika campaign transcended regional boundaries through precision-targeted activations across Meta, TikTok, Snapchat, and YouTube, amplifying a landmark collaboration into an internationally recognized moment. Virality was engineered, not accidental.</p>
-                            <a href="https://www.youtube.com/watch?v=O--o-O-ABBw" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
+                            <div class="yt-meta"><span class="yt-tag yt-tag-gold">★ Industry First</span><span class="yt-year">2019</span></div>
+                            <h4 class="yt-title">Nassif Zeytoun · Sallemi</h4>
+                            <p class="yt-result">First TikTok Campaign in the Arab Region</p>
+                            <p class="yt-desc">Built and launched the first-ever TikTok campaign in the Arab world in partnership with ByteDance. Set the blueprint others later copied.</p>
+                            <a href="https://youtu.be/y9aPKUbnrn0" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
                         </div>
                     </div>
                     <div class="yt-card rev d1">
@@ -1018,21 +946,47 @@
                             <div class="yt-meta"><span class="yt-tag">FIFA · Global</span><span class="yt-year">2022</span></div>
                             <h4 class="yt-title">Rahma Riad, Nora Fatehi, Balqees, Manal · Light The Sky</h4>
                             <p class="yt-result">FIFA World Cup Qatar 2022 Official Soundtrack</p>
-                            <p class="yt-desc">Drove the social media strategy for the official FIFA World Cup Qatar 2022 anthem produced by RedOne, one of the highest-profile moments of the decade. Led cross-artist content coordination across multiple teams and markets at the world's biggest sporting stage.</p>
+                            <p class="yt-desc">Led the social strategy for the official FIFA World Cup Qatar 2022 anthem. Cross-artist coordination at the world's biggest sporting stage.</p>
                             <a href="https://www.youtube.com/watch?v=4HKNdrBYS5k" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
                         </div>
                     </div>
                     <div class="yt-card rev">
                         <div class="yt-thumb">
-                            <img src="https://img.youtube.com/vi/hORTvBwYX68/maxresdefault.jpg" alt="Nassif Zeytoun - Caramella" loading="lazy">
-                            <a href="https://www.youtube.com/watch?v=hORTvBwYX68" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
+                            <img src="https://img.youtube.com/vi/O--o-O-ABBw/maxresdefault.jpg" alt="Elissa & Saad Lamjarred - Min Awel Dekika" loading="lazy">
+                            <a href="https://www.youtube.com/watch?v=O--o-O-ABBw" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
                         </div>
                         <div class="yt-info">
-                            <div class="yt-meta"><span class="yt-tag">Meta Activation</span><span class="yt-year">Multi-year</span></div>
-                            <h4 class="yt-title">Nassif Zeytoun · Caramella</h4>
-                            <p class="yt-result">Direct Meta Partnership · Paid Campaign</p>
-                            <p class="yt-desc">Designed and executed a direct Meta activation campaign for Nassif Zeytoun's 'Caramella' across Instagram and Facebook. Worked side-by-side with Meta's team to secure a dedicated paid media budget, overseeing the full creative-to-execution pipeline, setting a benchmark for platform-brand collaboration in the entertainment space.</p>
-                            <a href="https://www.youtube.com/watch?v=hORTvBwYX68" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
+                            <div class="yt-meta"><span class="yt-tag">Record-Breaking</span><span class="yt-year">2022</span></div>
+                            <h4 class="yt-title">Elissa &amp; Saad Lamjarred · Min Awel Dekika</h4>
+                            <p class="yt-result">602M+ Views · International Reach</p>
+                            <p class="yt-desc">End-to-end strategy across Meta, TikTok, Snapchat, and&nbsp;YouTube. One of the most-streamed releases of 2022. Engineered, not accidental.</p>
+                            <a href="https://www.youtube.com/watch?v=O--o-O-ABBw" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
+                    <div class="yt-card rev d1">
+                        <div class="yt-thumb">
+                            <img src="https://img.youtube.com/vi/NofWNvNU6Gk/maxresdefault.jpg" alt="Nassif Zeytoun - Bel Ahlam" loading="lazy">
+                            <a href="https://youtu.be/NofWNvNU6Gk" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
+                        </div>
+                        <div class="yt-info">
+                            <div class="yt-meta"><span class="yt-tag">Meta Activation · Production</span><span class="yt-year">2022</span></div>
+                            <h4 class="yt-title">Nassif Zeytoun · Bel Ahlam</h4>
+                            <p class="yt-result">Full Ownership: Production to Campaign</p>
+                            <p class="yt-desc">Full ownership from music video production through marketing execution. Selected by Meta for an official activation, unlocking paid media across Facebook and&nbsp;Instagram.</p>
+                            <a href="https://youtu.be/NofWNvNU6Gk" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
+                    <div class="yt-card rev">
+                        <div class="yt-thumb">
+                            <img src="https://img.youtube.com/vi/sE6vJ9jyEKs/maxresdefault.jpg" alt="Rahma Riad x PUBG Mobile - Ani Asasiya" loading="lazy">
+                            <a href="https://youtu.be/sE6vJ9jyEKs" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
+                        </div>
+                        <div class="yt-info">
+                            <div class="yt-meta"><span class="yt-tag">Brand × Artist Collab</span><span class="yt-year">2024</span></div>
+                            <h4 class="yt-title">Rahma Riad × PUBG Mobile · Ani Asasiya</h4>
+                            <p class="yt-result">Gaming × Music Cross-Industry Campaign</p>
+                            <p class="yt-desc">Led the cross-industry collab between global gaming giant PUBG Mobile and&nbsp;Rahma Riad. Bridged gaming and&nbsp;entertainment audiences for maximum cultural impact.</p>
+                            <a href="https://youtu.be/sE6vJ9jyEKs" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
                         </div>
                     </div>
                     <div class="yt-card rev d1">
@@ -1044,87 +998,8 @@
                             <div class="yt-meta"><span class="yt-tag">Viral Strategy</span><span class="yt-year">Multi-year</span></div>
                             <h4 class="yt-title">Al Shami · Ya Leil w Ya El Ein</h4>
                             <p class="yt-result">Platform-Wide Virality · TikTok &amp; Instagram</p>
-                            <p class="yt-desc">Architected the social media marketing strategy with a sharp focus on content engineered for virality. By leveraging real-time platform trends and precise audience behavior insights on TikTok and Instagram, the campaign drove organic discovery and sustained engagement that contributed to widespread regional popularity.</p>
+                            <p class="yt-desc">Strategy engineered for virality. Real-time trend execution on TikTok and&nbsp;Instagram drove organic discovery and&nbsp;sustained regional reach.</p>
                             <a href="https://youtu.be/b3unvqHR9m8" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
-                        </div>
-                    </div>
-                    <div class="yt-card rev">
-                        <div class="yt-thumb">
-                            <img src="https://img.youtube.com/vi/SkIUHkHmwug/maxresdefault.jpg" alt="Saad Lamjarred & Hatim Ammor - Mahboubi" loading="lazy">
-                            <a href="https://youtu.be/SkIUHkHmwug" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
-                        </div>
-                        <div class="yt-info">
-                            <div class="yt-meta"><span class="yt-tag">Cross-Market Campaign</span><span class="yt-year">2024</span></div>
-                            <h4 class="yt-title">Saad Lamjarred &amp; Hatim Ammor · Mahboubi</h4>
-                            <p class="yt-result">North Africa &amp; Gulf Region Reach</p>
-                            <p class="yt-desc">Led the comprehensive music and social media marketing strategy for this powerhouse collaboration. Built platform-native content strategies for TikTok and Instagram, combining deep North African audience insights with trend-driven creative execution to maximize reach and cultural resonance across key markets.</p>
-                            <a href="https://youtu.be/SkIUHkHmwug" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
-                        </div>
-                    </div>
-                    <div class="yt-card rev d1">
-                        <div class="yt-thumb">
-                            <img src="https://img.youtube.com/vi/CzvJ1aaGkSU/maxresdefault.jpg" alt="Saif Nabeel ft. Hind Ziadi - Allo Allo" loading="lazy">
-                            <a href="https://youtu.be/CzvJ1aaGkSU" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
-                        </div>
-                        <div class="yt-info">
-                            <div class="yt-meta"><span class="yt-tag">Full-Cycle Campaign</span><span class="yt-year">2025</span></div>
-                            <h4 class="yt-title">Saif Nabeel ft. Hind Ziadi · Allo Allo</h4>
-                            <p class="yt-result">+10 Million Views</p>
-                            <p class="yt-desc">Led the full social media campaign, managing a comprehensive pre, during, and post-release strategy for Saif Nabeel. Developed activation frameworks that sustained audience engagement through every phase of the release cycle. Platform-specific content on TikTok and Instagram helped the track cross +10 million views.</p>
-                            <a href="https://youtu.be/CzvJ1aaGkSU" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
-                        </div>
-                    </div>
-                    <div class="yt-card rev">
-                        <div class="yt-thumb">
-                            <img src="https://img.youtube.com/vi/TXioVRBD5hI/maxresdefault.jpg" alt="Al Shami - Wein" loading="lazy">
-                            <a href="https://youtu.be/TXioVRBD5hI" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
-                        </div>
-                        <div class="yt-info">
-                            <div class="yt-meta"><span class="yt-tag">Integrated Marketing</span><span class="yt-year">2024</span></div>
-                            <h4 class="yt-title">Al Shami · Wein</h4>
-                            <p class="yt-result">Dubai Coca-Cola Arena · Global Village</p>
-                            <p class="yt-desc">Oversaw the integrated marketing strategy ensuring cohesive brand identity across all digital touchpoints while supporting Al Shami's live event presence. The campaign's consistent brand positioning played a direct role in elevating his profile for high-profile performances at Coca-Cola Arena Dubai and Global Village.</p>
-                            <a href="https://youtu.be/TXioVRBD5hI" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
-                        </div>
-                    </div>
-                    <div class="yt-card yt-first rev d1">
-                        <div class="yt-thumb">
-                            <div class="first-badge">★ Industry First · Arab World</div>
-                            <img src="https://img.youtube.com/vi/y9aPKUbnrn0/maxresdefault.jpg" alt="Nassif Zeytoun - Sallemi" loading="lazy" style="object-position:center center;">
-                            <a href="https://youtu.be/y9aPKUbnrn0" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
-                        </div>
-                        <div class="yt-info">
-                            <div class="yt-meta"><span class="yt-tag yt-tag-gold">★ Industry First</span><span class="yt-year">2019</span></div>
-                            <h4 class="yt-title">Nassif Zeytoun · Sallemi</h4>
-                            <p class="yt-result">First TikTok Campaign in the Arab Region</p>
-                            <p class="yt-desc">Pioneered the first-ever TikTok marketing campaign in the Arab world, a landmark executed in partnership with Nassif Zeytoun, ByteDance (TikTok's parent company), Watary, and Music Is My Life. Before the playbook existed, before anyone in the region had done it. This campaign established the blueprint for how content could engage an entire new generation on social media.</p>
-                            <a href="https://youtu.be/y9aPKUbnrn0" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
-                        </div>
-                    </div>
-                    <div class="yt-card rev">
-                        <div class="yt-thumb">
-                            <img src="https://img.youtube.com/vi/NofWNvNU6Gk/maxresdefault.jpg" alt="Nassif Zeytoun - Bel Ahlam" loading="lazy">
-                            <a href="https://youtu.be/NofWNvNU6Gk" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
-                        </div>
-                        <div class="yt-info">
-                            <div class="yt-meta"><span class="yt-tag">Meta Activation · Production</span><span class="yt-year">2022</span></div>
-                            <h4 class="yt-title">Nassif Zeytoun · Bel Ahlam</h4>
-                            <p class="yt-result">Full Ownership: Production to Campaign</p>
-                            <p class="yt-desc">One of the most complete campaign ownerships of my career, involved from music video production through to full marketing execution. Led all creative, digital, and social media marketing for 'Bel Ahlam,' and the track was subsequently selected by Meta for their official activation initiative, unlocking a dedicated paid media budget across Facebook and Instagram.</p>
-                            <a href="https://youtu.be/NofWNvNU6Gk" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
-                        </div>
-                    </div>
-                    <div class="yt-card rev d1">
-                        <div class="yt-thumb">
-                            <img src="https://img.youtube.com/vi/sE6vJ9jyEKs/maxresdefault.jpg" alt="Rahma Riad x PUBG Mobile - Ani Asasiya" loading="lazy">
-                            <a href="https://youtu.be/sE6vJ9jyEKs" target="_blank" rel="noopener" class="yt-play" aria-label="Watch on YouTube">▶</a>
-                        </div>
-                        <div class="yt-info">
-                            <div class="yt-meta"><span class="yt-tag">Brand × Artist Collab</span><span class="yt-year">2024</span></div>
-                            <h4 class="yt-title">Rahma Riad × PUBG Mobile · Ani Asasiya</h4>
-                            <p class="yt-result">Gaming × Music Cross-Industry Campaign</p>
-                            <p class="yt-desc">Led the cross-industry collaboration strategy between global gaming giant PUBG Mobile and recording artist Rahma Riad. Managed the complete marketing and social media rollout, bridging gaming and entertainment audiences through tailored creative content that demonstrated how two industries can converge for maximum cultural impact.</p>
-                            <a href="https://youtu.be/sE6vJ9jyEKs" target="_blank" rel="noopener" class="c-link">Watch on YouTube ↗</a>
                         </div>
                     </div>
                 </div>
@@ -1157,7 +1032,7 @@
                         <div class="ig-thumb"><img src="images/ig-7.jpg" alt="PSG x Visit Qatar - Hakimi & Kimpembe" loading="lazy" style="object-position:center 28%;"><a href="https://www.instagram.com/reel/DK1rrPIt7Bp/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
                         <div class="ig-content">
                             <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">PSG Collab · Reel</span></div>
-                            <p class="ig-caption">Achraf Hakimi &amp; Presnel Kimpembe took on the Guess &amp; Kick challenge for Visit Qatar, a branded partnership with Paris Saint-Germain that merged world-class football talent with Qatar's destination marketing, reaching a global audience of PSG and football fans worldwide.</p>
+                            <p class="ig-caption">Achraf Hakimi &amp; Presnel Kimpembe in the Guess &amp; Kick challenge: a branded PSG × Visit Qatar partnership delivering world-class football talent to a global audience.</p>
                             <a href="https://www.instagram.com/reel/DK1rrPIt7Bp/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
                         </div>
                     </div>
@@ -1166,7 +1041,7 @@
                         <div class="ig-thumb"><img src="images/ig-8.jpg" alt="PSG x Visit Qatar - Ramos & Neves" loading="lazy" style="object-position:center 15%;"><a href="https://www.instagram.com/reel/DLkjLk9tydR/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
                         <div class="ig-content">
                             <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">PSG Collab · Reel</span></div>
-                            <p class="ig-caption">Gonçalo Ramos and João Neves turned the pitch into a canvas in this creative PSG × Visit Qatar branded challenge, fusing football artistry with Qatar's cultural identity and delivering high-reach content to a global sports audience through one of football's biggest clubs.</p>
+                            <p class="ig-caption">Gonçalo Ramos and&nbsp;João Neves in a PSG × Visit Qatar branded challenge. Football artistry meets Qatar's identity, delivered through one of football's biggest clubs.</p>
                             <a href="https://www.instagram.com/reel/DLkjLk9tydR/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
                         </div>
                     </div>
@@ -1174,7 +1049,7 @@
                         <div class="ig-thumb"><img src="images/ig-10.jpg" alt="Travis Scott - Circus Maximus Doha" loading="lazy" style="object-position:center 38%;"><a href="https://www.instagram.com/reel/DJxIRg_tazX/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
                         <div class="ig-content">
                             <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Live Events · Reel</span></div>
-                            <p class="ig-caption">Travis Scott's Circus Maximus stormed Doha, from build-up to blowout. Real-time coverage of one of the most high-profile international concerts ever hosted in Qatar, driving massive social engagement and positioning Qatar as a world-class entertainment destination.</p>
+                            <p class="ig-caption">Travis Scott's Circus Maximus tour in Doha. Real-time coverage of one of the highest-profile international concerts Qatar has hosted.</p>
                             <a href="https://www.instagram.com/reel/DJxIRg_tazX/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
                         </div>
                     </div>
@@ -1182,7 +1057,7 @@
                         <div class="ig-thumb"><img src="images/ig-9.jpg" alt="Ed Sheeran - Doha Concert" loading="lazy"><a href="https://www.instagram.com/reel/DJHkntCNnvP/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
                         <div class="ig-content">
                             <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Live Events · Reel</span></div>
-                            <p class="ig-caption">Ed Sheeran lit up Doha in a night that had the city buzzing. Fast-turn social content capturing the energy of his Qatar performance, delivering organic reach and brand affinity for Visit Qatar as a global destination for world-class live entertainment.</p>
+                            <p class="ig-caption">Ed Sheeran live in Doha. Fast-turn social content capturing the night, delivering organic reach for Visit Qatar as a destination for world-class live entertainment.</p>
                             <a href="https://www.instagram.com/reel/DJHkntCNnvP/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
                         </div>
                     </div>
@@ -1190,47 +1065,15 @@
                         <div class="ig-thumb"><img src="images/ig-4.jpg" alt="Michael Bublé - Qatar Shows" loading="lazy"><a href="https://www.instagram.com/reel/DKG13t2sKsZ/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
                         <div class="ig-content">
                             <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Live Events · Reel</span></div>
-                            <p class="ig-caption">Two spectacular nights with Michael Bublé at Qatar's top venues, blending timeless classics with an exceptional live performance. Multi-platform social coverage driving audience engagement and positioning Qatar as a premium global entertainment destination.</p>
+                            <p class="ig-caption">Two nights with Michael Bublé at Qatar's top venues. Multi-platform coverage positioning Qatar as a premium global entertainment destination.</p>
                             <a href="https://www.instagram.com/reel/DKG13t2sKsZ/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
-                        </div>
-                    </div>
-                    <div class="ig-card rev d1">
-                        <div class="ig-thumb"><img src="images/ig-6.jpg" alt="Visit Qatar - Summer Waterparks" loading="lazy" style="object-position:center 45%;"><a href="https://www.instagram.com/reel/DKt76bXstiU/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
-                        <div class="ig-content">
-                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Summer Campaign · Reel</span></div>
-                            <p class="ig-caption">Summer in Qatar means sun, sea, and endless water adventures at Meryal and Desert Falls Waterparks. Seasonal tourism content crafted to convert intent into travel, driving awareness for Qatar's leisure offerings during peak summer months across GCC markets.</p>
-                            <a href="https://www.instagram.com/reel/DKt76bXstiU/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
-                        </div>
-                    </div>
-                    <div class="ig-card rev">
-                        <div class="ig-thumb"><img src="images/ig-1.jpg" alt="Visit Qatar - Getaway Lifestyle" loading="lazy" style="object-position:center 90%;"><a href="https://www.instagram.com/reel/DJZITo3sk6u/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
-                        <div class="ig-content">
-                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Destination · Reel</span></div>
-                            <p class="ig-caption">Lifestyle-driven destination content inviting audiences into Qatar's world, with bilingual storytelling designed to inspire travel consideration across GCC and international markets. A question that converts: What's your ideal getaway?</p>
-                            <a href="https://www.instagram.com/reel/DJZITo3sk6u/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
-                        </div>
-                    </div>
-                    <div class="ig-card rev d1">
-                        <div class="ig-thumb"><img src="images/ig-2.jpg" alt="Visit Qatar - Architecture" loading="lazy" style="object-position:center 65%;"><a href="https://www.instagram.com/reel/DJbpeQVMeex/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
-                        <div class="ig-content">
-                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Architecture · Reel</span></div>
-                            <p class="ig-caption">In Qatar, architecture speaks louder than words. Visual storytelling showcasing the country's iconic structures, communicating Qatar's cultural ambition and modernity to an international audience of potential visitors and investors.</p>
-                            <a href="https://www.instagram.com/reel/DJbpeQVMeex/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
-                        </div>
-                    </div>
-                    <div class="ig-card rev">
-                        <div class="ig-thumb"><img src="images/ig-3.jpg" alt="Visit Qatar - Summer Water Adventures" loading="lazy" style="object-position:center 35%;"><a href="https://www.instagram.com/reel/DJwKgEUMtOP/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
-                        <div class="ig-content">
-                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Summer Campaign · Reel</span></div>
-                            <p class="ig-caption">Water adventures, summer energy, and Qatar's vibrant coastline. Strategic seasonal content designed to attract family and leisure travelers, positioning Qatar's aquatic experiences as a must-visit summer destination across GCC and regional markets.</p>
-                            <a href="https://www.instagram.com/reel/DJwKgEUMtOP/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
                         </div>
                     </div>
                     <div class="ig-card rev d1">
                         <div class="ig-thumb"><img src="images/ig-5.jpg" alt="Visit Qatar - World Ocean Day" loading="lazy"><a href="https://www.instagram.com/reel/DKpG6CcND7l/" target="_blank" rel="noopener" class="ig-play" aria-label="View on Instagram">▶</a></div>
                         <div class="ig-content">
                             <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Brand Initiative · Reel</span></div>
-                            <p class="ig-caption">Marine life thrives along the vibrant shores of Qatar. Purpose-driven brand content for World Ocean Day, aligning Visit Qatar with global sustainability values while showcasing the country's rich coastal ecosystem to an environmentally-conscious international audience.</p>
+                            <p class="ig-caption">Purpose-driven brand content for World Ocean Day, aligning Visit Qatar with sustainability while showcasing the country's coastal ecosystem.</p>
                             <a href="https://www.instagram.com/reel/DKpG6CcND7l/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
                         </div>
                     </div>
@@ -1271,7 +1114,6 @@
                     <p class="f-desc">Selected by YouTube as a featured regional initiative for creative innovation in digital marketing, validating a concept others hadn't yet imagined.</p>
                 </div>
             </div>
-            <div class="firsts-tagline rev"><p>Three regional firsts. Zero playbooks. All instinct.</p></div>
         </div>
     </section>
 
@@ -1288,6 +1130,7 @@
                 <span class="brand-badge">Nine West Group</span>
                 <span class="brand-badge">M&amp;C Saatchi MENA</span>
             </div>
+            <p class="brands-langs rev d2">Arabic &nbsp;·&nbsp; English &nbsp;·&nbsp; French</p>
         </div>
     </section>
 
@@ -1303,17 +1146,17 @@
                 <div class="phil-card rev">
                     <div class="phil-num">01</div>
                     <h3 class="phil-title">Audience before platform</h3>
-                    <p class="phil-body">I don't decide where to show up until I know exactly who I'm talking to. Channel selection without audience clarity is just noise with a budget behind it.</p>
+                    <p class="phil-body">Channel selection without audience clarity is just noise with a budget behind it. I don't decide where to show up until I know exactly who I'm talking to.</p>
                 </div>
                 <div class="phil-card rev d1">
                     <div class="phil-num">02</div>
                     <h3 class="phil-title">Data informs. Instinct decides.</h3>
-                    <p class="phil-body">Numbers tell you what happened. Strategy is what you do next. The strongest campaigns live in the space between rigorous analytics and earned judgment.</p>
+                    <p class="phil-body">Numbers tell you what happened. Strategy is what you do next. The strongest campaigns live between rigorous analytics and&nbsp;earned judgment.</p>
                 </div>
                 <div class="phil-card rev d2">
                     <div class="phil-num">03</div>
                     <h3 class="phil-title">Built to scale, not just to ship.</h3>
-                    <p class="phil-body">A campaign that can't compound isn't a campaign; it's an event. I build systems with architecture that grows past the brief and survives the next budget cycle.</p>
+                    <p class="phil-body">A campaign that can't compound isn't a campaign; it's an event. I build systems that grow past the brief and&nbsp;survive the next budget cycle.</p>
                 </div>
             </div>
         </div>
@@ -1331,17 +1174,13 @@
                 <div>
                     <p class="eyebrow rev" style="margin-bottom:20px;">Core Skills</p>
                     <div class="pills rev d1">
-                        <span class="pill">Performance Marketing</span>
                         <span class="pill">Paid Media Strategy</span>
                         <span class="pill">Campaign Architecture</span>
-                        <span class="pill">Audience Growth</span>
+                        <span class="pill">Platform Partnerships</span>
                         <span class="pill">Account Management</span>
                         <span class="pill">Team Leadership</span>
-                        <span class="pill">Budget Management</span>
-                        <span class="pill">Analytics &amp; ROI</span>
-                        <span class="pill">Content Strategy</span>
+                        <span class="pill">Budget &amp; ROI</span>
                         <span class="pill">Influencer Marketing</span>
-                        <span class="pill">Platform Partnerships</span>
                         <span class="pill">Multi-market Campaigns</span>
                     </div>
                 </div>
@@ -1361,7 +1200,6 @@
                             <span class="t-badge">Sprout Social</span>
                             <span class="t-badge">Hootsuite</span>
                             <span class="t-badge">Google Analytics</span>
-                            <span class="t-badge">Excel</span>
                         </div>
                     </div>
                     <div class="tg rev d2">
@@ -1371,7 +1209,6 @@
                             <span class="t-badge">ChatGPT</span>
                             <span class="t-badge">Midjourney</span>
                             <span class="t-badge">Runway</span>
-                            <span class="t-badge">Canva</span>
                             <span class="t-badge">CapCut</span>
                         </div>
                     </div>
@@ -1383,7 +1220,7 @@
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="wrap">
-            <h2 class="contact-hl rev">Looking for a Senior Marketing Strategist <em style="white-space:nowrap;">who&nbsp;delivers at&nbsp;scale?</em></h2>
+            <h2 class="contact-hl rev">Looking for a Senior Marketing Strategist <em class="contact-tail">who&nbsp;delivers at&nbsp;scale?</em></h2>
             <p class="contact-sub rev">Based in Dubai. Open to senior marketing and growth roles across MENA and beyond. Let's talk.</p>
             <div class="contact-phones rev">
                 <div class="cp"><span>UAE</span><a href="tel:+971567544206">+971 56 754 4206</a></div>
@@ -1407,17 +1244,12 @@
                 </div>
                 <button class="form-submit" onclick="sendMail()">Send Message</button>
             </div>
-            <div class="contact-btns rev">
-                <a href="mailto:jad.yazbek89@gmail.com" class="btn-g">Email Me</a>
-                <a href="https://linkedin.com/in/jadyazbek" target="_blank" rel="noopener" class="btn-o">LinkedIn</a>
-                <a href="Jad Yazbeck Resume.pdf" download class="btn-o">Download CV</a>
-            </div>
         </div>
     </section>
 
     <footer>
         <div class="wrap">
-            <p>© 2026 Jad Yazbeck &nbsp;·&nbsp; Senior Marketing Strategist &nbsp;·&nbsp; Dubai, UAE</p>
+            <p>© 2026 Jad Yazbeck &nbsp;·&nbsp; Senior Marketing Strategist &nbsp;·&nbsp; Dubai, UAE &nbsp;·&nbsp; <a href="https://linkedin.com/in/jadyazbek" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;">LinkedIn</a></p>
         </div>
     </footer>
 
@@ -1451,7 +1283,7 @@
         });
     });
 
-    const navSections = ['campaigns','showcase','firsts','skills','contact'];
+    const navSections = ['case-study','showcase','firsts','skills','contact'];
     const navAnchors  = {};
     navSections.forEach(id => { navAnchors[id] = navLinks.querySelector(`a[href="#${id}"]`); });
 
@@ -1487,7 +1319,7 @@
         ring.style.left=rx+'px'; ring.style.top=ry+'px';
         requestAnimationFrame(tick);
     })();
-    document.querySelectorAll('a,button,.c-card,.f-card,.tl-head,.pill,.t-badge,.yt-card,.ig-card').forEach(el => {
+    document.querySelectorAll('a,button,.f-card,.pill,.t-badge,.yt-card,.ig-card,.cs-block,.known-card,.phil-card').forEach(el => {
         el.addEventListener('mouseenter',()=>{cur.classList.add('big');ring.classList.add('big');});
         el.addEventListener('mouseleave',()=>{cur.classList.remove('big');ring.classList.remove('big');});
     });
