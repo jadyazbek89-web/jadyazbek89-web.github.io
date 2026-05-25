@@ -36,7 +36,7 @@
             --border:   rgba(255,255,255,.07);
             --serif:    'Space Grotesk', system-ui, sans-serif;
             --sans:     'Inter', system-ui, sans-serif;
-            --pad:      112px;
+            --pad:      88px;
             --max:      1200px;
         }
         *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -46,7 +46,7 @@
             font-family: var(--sans); font-weight: 400;
             line-height: 1.6; cursor: none; overflow-x: hidden;
         }
-        @media (max-width:768px) { body { cursor:auto; } :root { --pad: 80px; } }
+        @media (max-width:768px) { body { cursor:auto; } :root { --pad: 64px; } }
 
         /* NAV */
         #nav {
@@ -180,7 +180,7 @@
         .hero {
             min-height:100vh; display:flex; align-items:center; justify-content:center;
             position:relative; overflow:hidden; text-align:center;
-            padding-top:80px; padding-bottom:80px;
+            padding-top:64px; padding-bottom:56px;
         }
         .hero-bg {
             position:absolute; inset:0;
@@ -261,7 +261,7 @@
         }
         @media (max-width:900px) { .stats-strip { grid-template-columns:repeat(2,1fr); } }
         .s-card {
-            background:var(--black); padding:48px 32px; text-align:center;
+            background:var(--black); padding:40px 28px; text-align:center;
             transition:background .3s, box-shadow .3s;
         }
         .s-card:hover { background:var(--black-2); box-shadow:0 0 40px rgba(45,212,191,.06); }
@@ -285,11 +285,11 @@
 
         /* FIRSTS */
         .firsts { background:var(--black); }
-        .firsts-hd { text-align:center; margin-bottom:72px; }
+        .firsts-hd { text-align:center; margin-bottom:48px; }
         .firsts-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
         @media (max-width:900px) { .firsts-grid { grid-template-columns:1fr; } }
         .f-card {
-            background:var(--black-3); padding:56px 44px;
+            background:var(--black-3); padding:48px 40px;
             position:relative; overflow:hidden; transition:background .4s, box-shadow .4s;
         }
         .f-card:hover { background:var(--black-4); box-shadow:0 8px 40px rgba(124,58,237,.1); }
@@ -380,7 +380,7 @@
         .lang-line p { font-size:12.5px; color:var(--white-60); line-height:1.7; }
 
         /* CONTACT */
-        .contact { background:var(--black-2); padding:140px 0; text-align:center; }
+        .contact { background:var(--black-2); padding:96px 0; text-align:center; }
         .contact-hl {
             font-family:var(--serif); font-size:clamp(2.4rem,6vw,4.8rem);
             font-weight:600; line-height:1.1; color:var(--white); margin-bottom:14px;
@@ -526,7 +526,7 @@
             opacity:0; transition:opacity .3s; text-decoration:none;
         }
         .yt-card:hover .yt-play { opacity:1; }
-        .yt-info { padding:28px 28px 32px; display:flex; flex-direction:column; flex:1; }
+        .yt-info { padding:24px 24px 28px; display:flex; flex-direction:column; flex:1; }
         .yt-meta { display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
         .yt-tag {
             font-size:9px; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
@@ -546,7 +546,7 @@
         }
         .equal-img { position:relative; min-height:320px; overflow:hidden; }
         .equal-img img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
-        .equal-content { padding:52px 48px; display:flex; flex-direction:column; justify-content:center; }
+        .equal-content { padding:40px 40px; display:flex; flex-direction:column; justify-content:center; }
         .equal-eyebrow {
             font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
             color:#1db954; margin-bottom:18px;
@@ -642,7 +642,7 @@
 
         /* MOBILE */
         @media (max-width:768px) {
-            .hero { padding-top:64px; }
+            .hero { padding-top:48px; padding-bottom:40px; }
             .hero-name { font-size:clamp(2rem,10vw,4rem); white-space:normal; }
             .hero-photo { width:170px; height:170px; }
             .tl-wrap { padding-left:28px; }
@@ -652,12 +652,12 @@
             .tl-right { gap:10px; margin-left:12px; }
             .tl-period { display:none; }
             .tl-inner { padding:20px; }
-            .f-card { padding:40px 28px; }
+            .f-card { padding:36px 24px; }
             .f-num { font-size:3.5rem; top:20px; right:20px; }
-            .contact { padding:80px 0; }
+            .contact { padding:60px 0; }
             .contact-hl { margin-bottom:16px; }
             .contact-phones { gap:24px; }
-            .s-card { padding:36px 20px; }
+            .s-card { padding:28px 16px; }
         }
         @media (max-width:480px) {
             .hero-name { font-size:clamp(1.8rem,9vw,3rem); white-space:normal; }
@@ -698,7 +698,7 @@
 
         /* CASE STUDY */
         .case-study { background:var(--black-2); }
-        .cs-header { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:64px; }
+        .cs-header { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; margin-bottom:44px; }
         @media (max-width:768px) { .cs-header { grid-template-columns:1fr; gap:36px; } }
         .cs-meta { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px; }
         .cs-tag {
@@ -709,7 +709,7 @@
         .cs-intro strong { color:var(--white); font-weight:500; }
         .cs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
         @media (max-width:900px) { .cs-grid { grid-template-columns:1fr; } }
-        .cs-block { background:var(--black-3); padding:44px 36px; }
+        .cs-block { background:var(--black-3); padding:36px 32px; }
         .cs-label {
             font-size:9px; font-weight:700; letter-spacing:.28em; text-transform:uppercase;
             color:var(--purple); margin-bottom:18px;
@@ -718,7 +718,7 @@
         .cs-content strong { color:var(--white); font-weight:500; }
         .cs-results { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:2px; }
         @media (max-width:768px) { .cs-results { grid-template-columns:1fr; } }
-        .cs-result-card { background:var(--black-4); padding:40px 32px; text-align:center; border-top:2px solid var(--teal); }
+        .cs-result-card { background:var(--black-4); padding:32px 28px; text-align:center; border-top:2px solid var(--teal); }
         .cs-result-num { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); font-weight:700; color:var(--teal); line-height:1; margin-bottom:10px; }
         .cs-result-label { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--white-60); }
 
@@ -818,7 +818,7 @@
     <!-- WHAT I'M KNOWN FOR -->
     <section class="sec" id="known" style="background:var(--black);">
         <div class="wrap">
-            <div class="rev" style="margin-bottom:52px;text-align:center;">
+            <div class="rev" style="margin-bottom:36px;text-align:center;">
                 <p class="eyebrow">Why Hire Me</p>
                 <h2 class="h-display">What I'm Known For</h2>
                 <div class="bar bar-c"></div>
@@ -849,7 +849,7 @@
     <!-- FLAGSHIP CASE STUDY -->
     <section class="sec case-study" id="case-study">
         <div class="wrap">
-            <div class="rev" style="margin-bottom:64px;">
+            <div class="rev" style="margin-bottom:44px;">
                 <p class="eyebrow">Flagship Case Study</p>
                 <h2 class="h-display">Visit Qatar</h2>
                 <div class="bar"></div>
@@ -902,7 +902,7 @@
     <!-- WORK SHOWCASE -->
     <section class="sec work-showcase" id="showcase">
         <div class="wrap">
-            <div class="rev" style="margin-bottom:64px;">
+            <div class="rev" style="margin-bottom:44px;">
                 <p class="eyebrow">Campaign Portfolio</p>
                 <h2 class="h-display">Work Showcase</h2>
                 <div class="bar"></div>
@@ -910,7 +910,7 @@
             </div>
 
             <!-- ENTERTAINMENT & LIVE EVENTS -->
-            <div style="margin-bottom:96px;">
+            <div style="margin-bottom:64px;">
                 <div class="rev">
                     <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap;">
                         <h3 class="showcase-sub-title">Entertainment &amp; Live Events</h3>
@@ -1018,7 +1018,7 @@
             </div>
 
             <!-- VISIT QATAR -->
-            <div style="margin-top:96px;">
+            <div style="margin-top:64px;">
                 <div class="rev">
                     <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap;">
                         <h3 class="showcase-sub-title">Visit Qatar</h3>
@@ -1118,7 +1118,7 @@
     </section>
 
     <!-- BRANDS -->
-    <section class="sec brands" id="brands" style="background:var(--black-2); padding:72px 0;">
+    <section class="sec brands" id="brands" style="background:var(--black-2); padding:56px 0;">
         <div class="wrap">
             <p class="brands-label rev">Brands &amp; Clients</p>
             <div class="brands-row rev d1">
@@ -1137,7 +1137,7 @@
     <!-- PHILOSOPHY -->
     <section class="sec" id="philosophy">
         <div class="wrap">
-            <div class="rev" style="margin-bottom:52px;">
+            <div class="rev" style="margin-bottom:36px;">
                 <p class="eyebrow">How I Think</p>
                 <h2 class="h-display">The Approach</h2>
                 <div class="bar"></div>
@@ -1165,7 +1165,7 @@
     <!-- SKILLS & STACK -->
     <section class="sec skills" id="skills">
         <div class="wrap">
-            <div class="rev" style="margin-bottom:52px;">
+            <div class="rev" style="margin-bottom:36px;">
                 <p class="eyebrow">Capabilities</p>
                 <h2 class="h-display">Skills &amp; Stack</h2>
                 <div class="bar"></div>
