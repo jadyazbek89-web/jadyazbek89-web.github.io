@@ -128,9 +128,10 @@
         .l1 { animation:fadeUp .7s ease .2s both; }
         .l2 { animation:fadeUp .8s ease .45s both; }
         .l3 { animation:fadeUp 1s  ease .75s both; }
-        .l4 { animation:fadeUp .8s ease 1.05s both; }
-        .l5 { animation:fadeUp .8s ease 1.3s both; }
-        .l6 { animation:fadeUp .8s ease 1.55s both; }
+        .l3a{ animation:fadeUp .8s ease .92s both; }
+        .l4 { animation:fadeUp .8s ease 1.1s both; }
+        .l5 { animation:fadeUp .8s ease 1.35s both; }
+        .l6 { animation:fadeUp .8s ease 1.6s both; }
 
         /* LAYOUT */
         .wrap { max-width:var(--max); margin:0 auto; padding:0 40px; }
@@ -691,6 +692,69 @@
             .btn-g, .btn-o { width:100%; text-align:center; }
         }
 
+        /* HERO HOOK */
+        .hero-hook {
+            font-family:var(--sans); font-size:clamp(14px,1.9vw,17px);
+            font-weight:400; color:var(--white-60); letter-spacing:.01em;
+            line-height:1.6; margin-bottom:24px;
+            max-width:640px; margin-left:auto; margin-right:auto;
+        }
+        .hero-hook strong { color:var(--teal); font-weight:600; }
+
+        /* WHAT I'M KNOWN FOR */
+        .known-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+        @media (max-width:900px) { .known-grid { grid-template-columns:1fr; } }
+        .known-card {
+            background:var(--black-3); padding:52px 44px; position:relative;
+            border-top:2px solid transparent;
+            transition:background .4s, border-color .4s, transform .4s;
+        }
+        .known-card:hover { background:var(--black-4); border-color:var(--teal); transform:translateY(-4px); }
+        .known-num {
+            font-family:var(--serif); font-size:5rem; font-weight:300;
+            color:rgba(45,212,191,.07); position:absolute; top:24px; right:32px; line-height:1;
+        }
+        .known-stat {
+            font-family:var(--serif); font-size:clamp(2rem,4vw,2.8rem);
+            font-weight:700; color:var(--teal); margin-bottom:10px; line-height:1;
+        }
+        .known-title { font-family:var(--serif); font-size:1.15rem; font-weight:600; color:var(--white); margin-bottom:16px; line-height:1.3; }
+        .known-body { font-size:13.5px; color:var(--white-60); line-height:1.8; }
+
+        /* CASE STUDY */
+        .case-study { background:var(--black-2); }
+        .cs-header { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:64px; }
+        @media (max-width:768px) { .cs-header { grid-template-columns:1fr; gap:36px; } }
+        .cs-meta { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:24px; }
+        .cs-tag {
+            font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+            color:var(--teal); padding:5px 12px; border:1px solid rgba(45,212,191,.3);
+        }
+        .cs-intro { font-size:14px; color:var(--white-60); line-height:1.85; margin-bottom:14px; }
+        .cs-intro strong { color:var(--white); font-weight:500; }
+        .cs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+        @media (max-width:900px) { .cs-grid { grid-template-columns:1fr; } }
+        .cs-block { background:var(--black-3); padding:44px 36px; }
+        .cs-label {
+            font-size:9px; font-weight:700; letter-spacing:.28em; text-transform:uppercase;
+            color:var(--purple); margin-bottom:18px;
+        }
+        .cs-content { font-size:13.5px; color:var(--white-60); line-height:1.85; }
+        .cs-content strong { color:var(--white); font-weight:500; }
+        .cs-results { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:2px; }
+        @media (max-width:768px) { .cs-results { grid-template-columns:1fr; } }
+        .cs-result-card { background:var(--black-4); padding:40px 32px; text-align:center; border-top:2px solid var(--teal); }
+        .cs-result-num { font-family:var(--serif); font-size:clamp(2rem,4vw,3rem); font-weight:700; color:var(--teal); line-height:1; margin-bottom:10px; }
+        .cs-result-label { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--white-60); }
+
+        /* SOCIAL PROOF QUOTE */
+        .quote-section { background:var(--black-3); padding:88px 0; }
+        .quote-inner { max-width:760px; margin:0 auto; text-align:center; padding:0 40px; }
+        .quote-mark { font-family:var(--serif); font-size:6rem; line-height:.5; color:rgba(45,212,191,.2); display:block; margin-bottom:28px; }
+        .quote-text { font-family:var(--serif); font-size:clamp(1.1rem,2.5vw,1.45rem); font-weight:300; font-style:italic; color:var(--white); line-height:1.7; margin-bottom:32px; }
+        .quote-source { font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--teal); }
+        .quote-placeholder { font-size:12px; color:var(--white-30); font-style:italic; }
+
         /* PRINT */
         @media print {
             #nav,#cur,#cur-ring,#prog,#btt,#loader { display:none !important; }
@@ -747,7 +811,8 @@
             <div class="avail-chip l1"><span class="avail-dot"></span>Open to Full-Time Opportunities</div>
             <p class="hero-sup l2">Senior Marketing Strategist</p>
             <h1 class="hero-name l3">Jad Yazbeck</h1>
-            <p class="hero-tag l4">8+ years building high-impact, performance-driven campaigns for globally recognized brands across tourism, live events, and consumer markets in the MENA region. I've led multi-platform work in sports, entertainment, and lifestyle, directing paid media strategies, managing cross-functional teams of 15+, and delivering measurable results at scale.</p>
+            <p class="hero-hook l3a">The strategist behind MENA's first TikTok campaign, <strong>602M+ video views</strong>, and Qatar's <strong>100M+ reach</strong>.</p>
+            <p class="hero-tag l4">8+ years leading paid media, platform partnerships, and cross-functional teams across tourism, live events, and consumer brands in MENA. From strategy through execution — at FIFA World Cup scale.</p>
             <div class="hero-rot-wrap l5">
                 <span class="hero-rot" id="rotWord">Strategist.</span>
             </div>
@@ -782,6 +847,37 @@
             <p class="s-detail">Cross-Functional Team · Music Is My Life × Watary</p>
         </div>
     </div>
+
+    <!-- WHAT I'M KNOWN FOR -->
+    <section class="sec" id="known" style="background:var(--black);">
+        <div class="wrap">
+            <div class="rev" style="margin-bottom:52px;text-align:center;">
+                <p class="eyebrow">Why Hire Me</p>
+                <h2 class="h-display">What I'm Known For</h2>
+                <div class="bar bar-c"></div>
+            </div>
+            <div class="known-grid">
+                <div class="known-card rev">
+                    <div class="known-num">01</div>
+                    <div class="known-stat">3 Firsts</div>
+                    <h3 class="known-title">I move before the playbook exists.</h3>
+                    <p class="known-body">First TikTok campaign in the MENA region. First Instagram Reel in the Arab world. YouTube-recognized red carpet concept. I've built the blueprint others later followed — before any platform had instructions for it.</p>
+                </div>
+                <div class="known-card rev d1">
+                    <div class="known-num">02</div>
+                    <div class="known-stat">602M+</div>
+                    <h3 class="known-title">I scale numbers that make headlines.</h3>
+                    <p class="known-body">602M+ video views. 100M+ campaign reach. These are the result of precision audience targeting, multi-platform strategy, and direct partnerships with Meta, YouTube, and TikTok — not luck.</p>
+                </div>
+                <div class="known-card rev d2">
+                    <div class="known-num">03</div>
+                    <div class="known-stat">15+ People</div>
+                    <h3 class="known-title">I deliver at the world's biggest stages.</h3>
+                    <p class="known-body">FIFA World Cup Qatar 2022. PSG collab. Spotify EQUAL Arabia. Charlotte Tilbury. When the stakes are highest, I've been the one running the strategy — leading cross-functional teams across markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- CAMPAIGNS -->
     <section class="sec campaigns" id="campaigns">
@@ -821,6 +917,60 @@
                     <h3 class="c-title">International Events</h3>
                     <p class="c-result">Real-time Multi-platform Execution</p>
                     <p class="c-desc">End-to-end digital coverage for Travis Scott, Ed Sheeran, Michael Bublé, Qatar Food Festival, ITTF tournaments, Charlotte Tilbury, and FIFA activations. Live content ops, audience engagement, and platform distribution at scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLAGSHIP CASE STUDY -->
+    <section class="sec case-study" id="case-study">
+        <div class="wrap">
+            <div class="rev" style="margin-bottom:64px;">
+                <p class="eyebrow">Flagship Case Study</p>
+                <h2 class="h-display">Visit Qatar</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="cs-header rev">
+                <div>
+                    <div class="cs-meta">
+                        <span class="cs-tag">Tourism</span>
+                        <span class="cs-tag">Account Director</span>
+                        <span class="cs-tag">Multi-year</span>
+                        <span class="cs-tag">Meta · TikTok · Snapchat</span>
+                    </div>
+                    <p class="cs-intro">Qatar Tourism needed to position Qatar as a premier travel destination across GCC and international markets — a country with world-class infrastructure, major sporting events, and lifestyle experiences that most audiences hadn't yet considered. The challenge: build sustained digital presence that felt native, not broadcast, across three platforms simultaneously.</p>
+                </div>
+                <div>
+                    <p class="cs-intro"><strong>As Account Director, I owned the full digital strategy</strong> — channel planning, content architecture, paid media execution, creator coordination, and real-time optimization. From PSG athlete collabs to seasonal tourism pushes, every content decision connected back to one goal: drive Qatar into the travel consideration set.</p>
+                    <p class="cs-intro" style="color:rgba(45,212,191,.5);font-size:12px;">[JAD TO FILL: Add any additional scope detail — budget range, team size, or specific deliverables you're comfortable sharing.]</p>
+                </div>
+            </div>
+            <div class="cs-grid rev d1">
+                <div class="cs-block">
+                    <p class="cs-label">The Challenge</p>
+                    <p class="cs-content">Break into the GCC leisure travel market against established competitors, while managing bilingual content (Arabic + English) across segments — families, sports fans, culture seekers — on three platforms with different audiences and formats.</p>
+                </div>
+                <div class="cs-block">
+                    <p class="cs-label">The Strategy</p>
+                    <p class="cs-content"><strong>Audience-first content pillars:</strong> Culture, sports, food, and adventure — each mapped to platform and audience segment. <strong>Platform-native formats:</strong> Short-form reels for TikTok, carousel storytelling for Meta, influencer-led content for Snapchat. <strong>Event-driven amplification:</strong> PSG collab, FIFA, Qatar Food Festival — real moments turned into always-on reach.</p>
+                </div>
+                <div class="cs-block">
+                    <p class="cs-label">The Execution</p>
+                    <p class="cs-content">Coordinated content across PSG athletes, local creators, and Qatar Tourism's internal teams. Managed real-time paid media across three platforms with continuous A/B optimization. Delivered bilingual campaigns with localized targeting by market, language, and intent stage. Maintained brand consistency at scale across a multi-year engagement. <span style="color:rgba(45,212,191,.5);font-size:12px;">[JAD TO FILL: Specific team size or budget if comfortable.]</span></p>
+                </div>
+            </div>
+            <div class="cs-results rev d2">
+                <div class="cs-result-card">
+                    <div class="cs-result-num">100M+</div>
+                    <p class="cs-result-label">Campaign Reach</p>
+                </div>
+                <div class="cs-result-card">
+                    <div class="cs-result-num">3</div>
+                    <p class="cs-result-label">Platforms — Meta, TikTok & Snapchat</p>
+                </div>
+                <div class="cs-result-card" style="border-top-color:var(--purple);">
+                    <div class="cs-result-num" style="color:var(--purple);">[JAD]</div>
+                    <p class="cs-result-label">[Add a 3rd metric — engagement rate, impressions, or bookings uplift]</p>
                 </div>
             </div>
         </div>
@@ -1234,11 +1384,20 @@
         </div>
     </section>
 
+    <!-- SOCIAL PROOF -->
+    <section class="quote-section">
+        <div class="quote-inner rev">
+            <span class="quote-mark">"</span>
+            <p class="quote-text">[JAD TO FILL: One sentence from a client, manager, or collaborator. Example: "Jad built the strategy from zero and delivered results we hadn't seen before." Keep it specific and real — one strong quote beats three generic ones.]</p>
+            <p class="quote-source">[Name · Title · Company]</p>
+        </div>
+    </section>
+
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="wrap">
-            <h2 class="contact-hl rev">Let's build something that <em>moves people.</em></h2>
-            <p class="contact-sub rev">Open to full-time roles in marketing, growth, and digital strategy.</p>
+            <h2 class="contact-hl rev">Looking for a Senior Marketing Strategist who <em>delivers at scale?</em></h2>
+            <p class="contact-sub rev">Based in Dubai. Open to senior marketing and growth roles across MENA and beyond. Let's talk.</p>
             <div class="contact-phones rev">
                 <div class="cp"><span>UAE</span><a href="tel:+971567544206">+971 56 754 4206</a></div>
                 <div class="cp"><span>Lebanon</span><a href="tel:+96170154557">+961 70 154 557</a></div>
