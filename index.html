@@ -457,8 +457,11 @@
 
         /* BRANDS */
         .brands { text-align:center; }
-        .brands-label { font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--white-30); margin-bottom:36px; }
+        .brands-groups { display:flex; flex-direction:column; gap:40px; }
+        .brands-group { text-align:center; }
+        .brands-group-label { font-family:var(--sans); font-size:10px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--white-30); margin-bottom:18px; }
         .brands-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:20px 40px; }
+        .brands-row.platforms { gap:16px 28px; }
         .brand-logo {
             height:30px; width:auto; max-width:240px;
             filter:brightness(0) invert(1);
@@ -467,7 +470,7 @@
         }
         .brand-logo:hover { opacity:.9; }
         .brand-logo.hl { opacity:.6; }
-        .brands-langs { text-align:center; font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--white-30); margin-top:32px; }
+        .brands-langs { text-align:center; font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--white-30); margin-top:36px; }
 
         /* PHILOSOPHY */
         .phil-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:0; }
@@ -486,6 +489,7 @@
         @media (max-width:768px) {
             .phil-grid { grid-template-columns:1fr; gap:20px; }
             .brand-logo { height:22px; max-width:180px; }
+            .brands-groups { gap:28px; }
         }
 
         /* WORK SHOWCASE */
@@ -1140,20 +1144,46 @@
     </section>
 
     <!-- BRANDS -->
-    <section class="sec brands" id="brands" style="background:var(--black-2); padding:56px 0;">
+    <section class="sec brands" id="brands" style="background:var(--black-2); padding:64px 0;">
         <div class="wrap">
-            <p class="brands-label rev">Brands &amp; Clients</p>
-            <div class="brands-row rev d1">
-                <img class="brand-logo hl" src="images/logo-pubg-mobile.svg" alt="PUBG Mobile">
-                <img class="brand-logo" src="images/logo-visit-qatar.svg" alt="Visit Qatar">
-                <img class="brand-logo" src="images/logo-charlotte-tilbury.svg" alt="Charlotte Tilbury">
-                <img class="brand-logo" src="images/logo-fifa.svg" alt="FIFA">
-                <img class="brand-logo" src="images/logo-rotana.svg" alt="Rotana">
-                <img class="brand-logo" src="images/logo-mc-saatchi.svg" alt="M&amp;C Saatchi MENA">
-                <img class="brand-logo" src="images/logo-music-is-my-life.svg" alt="Music Is My Life">
-                <img class="brand-logo" src="images/logo-watary.svg" alt="Watary">
+            <div class="brands-groups">
+                <div class="brands-group rev d1">
+                    <p class="brands-group-label">Brands &amp; Clients</p>
+                    <div class="brands-row">
+                        <img class="brand-logo hl" src="images/logo-pubg-mobile.svg" alt="PUBG Mobile">
+                        <img class="brand-logo" src="images/logo-visit-qatar.svg" alt="Visit Qatar">
+                        <img class="brand-logo" src="images/logo-charlotte-tilbury.svg" alt="Charlotte Tilbury">
+                        <img class="brand-logo" src="images/logo-fifa.svg" alt="FIFA">
+                        <img class="brand-logo" src="images/logo-rotana.svg" alt="Rotana">
+                        <img class="brand-logo" src="images/logo-mc-saatchi.svg" alt="M&amp;C Saatchi MENA">
+                        <img class="brand-logo" src="images/logo-music-is-my-life.svg" alt="Music Is My Life">
+                        <img class="brand-logo" src="images/logo-watary.svg" alt="Watary">
+                    </div>
+                </div>
+                <div class="brands-group rev d2">
+                    <p class="brands-group-label">Streaming Platforms</p>
+                    <div class="brands-row platforms">
+                        <img class="brand-logo" src="images/logo-youtube.svg" alt="YouTube">
+                        <img class="brand-logo" src="images/logo-spotify.svg" alt="Spotify">
+                        <img class="brand-logo" src="images/logo-applemusic.svg" alt="Apple Music">
+                        <img class="brand-logo" src="images/logo-youtubemusic.svg" alt="YouTube Music">
+                        <img class="brand-logo" src="images/logo-amazonmusic.svg" alt="Amazon Music">
+                        <img class="brand-logo" src="images/logo-deezer.svg" alt="Deezer">
+                    </div>
+                </div>
+                <div class="brands-group rev d3">
+                    <p class="brands-group-label">Social &amp; Digital Channels</p>
+                    <div class="brands-row platforms">
+                        <img class="brand-logo" src="images/logo-facebook.svg" alt="Facebook">
+                        <img class="brand-logo" src="images/logo-instagram.svg" alt="Instagram">
+                        <img class="brand-logo" src="images/logo-whatsapp.svg" alt="WhatsApp">
+                        <img class="brand-logo" src="images/logo-tiktok.svg" alt="TikTok">
+                        <img class="brand-logo" src="images/logo-snapchat.svg" alt="Snapchat">
+                        <img class="brand-logo" src="images/logo-x.svg" alt="X">
+                    </div>
+                </div>
             </div>
-            <p class="brands-langs rev d2">Arabic &nbsp;·&nbsp; English &nbsp;·&nbsp; French</p>
+            <p class="brands-langs rev d4">Arabic &nbsp;·&nbsp; English &nbsp;·&nbsp; French</p>
         </div>
     </section>
 
