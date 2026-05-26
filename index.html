@@ -19,6 +19,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jad Yazbeck",
+      "jobTitle": "Senior Marketing Strategist",
+      "email": "jad.yazbek89@gmail.com",
+      "url": "https://jadyazbek89-web.github.io/",
+      "image": "https://jadyazbek89-web.github.io/Jad.jpeg",
+      "sameAs": ["https://www.linkedin.com/in/jadyazbek"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "knowsAbout": [
+        "Digital Marketing","Campaign Strategy","Paid Media",
+        "Social Media Marketing","Brand Strategy","Performance Marketing",
+        "Content Strategy","Influencer Marketing"
+      ],
+      "description": "Senior Marketing Strategist with 8+ years scaling campaigns across tourism, live events, and consumer brands in MENA. 100M+ campaign reach. 602M+ YouTube views."
+    }
+    </script>
     <style>
         :root {
             --black:    #080810;
@@ -435,16 +458,15 @@
         /* BRANDS */
         .brands { text-align:center; }
         .brands-label { font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--white-30); margin-bottom:36px; }
-        .brands-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px 16px; }
-        .brand-badge {
-            font-family:var(--serif); font-size:.82rem; font-weight:600; letter-spacing:.06em;
-            color:var(--white-60); padding:10px 22px;
-            border:1px solid var(--border); border-radius:8px;
-            background:rgba(255,255,255,.025);
-            transition:color .25s, border-color .25s, background .25s;
+        .brands-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:20px 40px; }
+        .brand-logo {
+            height:30px; width:auto; max-width:140px;
+            filter:brightness(0) invert(1);
+            opacity:.4; transition:opacity .25s;
+            object-fit:contain;
         }
-        .brand-badge:hover { color:var(--white); border-color:rgba(45,212,191,.4); background:rgba(45,212,191,.06); }
-        .brand-badge.hl { border-color:rgba(45,212,191,.25); color:rgba(45,212,191,.8); }
+        .brand-logo:hover { opacity:.9; }
+        .brand-logo.hl { opacity:.6; }
         .brands-langs { text-align:center; font-family:var(--sans); font-size:11px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--white-30); margin-top:32px; }
 
         /* PHILOSOPHY */
@@ -463,7 +485,7 @@
         .phil-body { font-family:var(--sans); font-size:.88rem; font-weight:300; color:var(--white-60); line-height:1.8; }
         @media (max-width:768px) {
             .phil-grid { grid-template-columns:1fr; gap:20px; }
-            .brand-badge { font-size:.78rem; padding:9px 18px; }
+            .brand-logo { height:24px; max-width:110px; }
         }
 
         /* WORK SHOWCASE */
@@ -1122,13 +1144,13 @@
         <div class="wrap">
             <p class="brands-label rev">Brands &amp; Clients</p>
             <div class="brands-row rev d1">
-                <span class="brand-badge hl">PUBG Mobile</span>
-                <span class="brand-badge">Visit Qatar</span>
-                <span class="brand-badge">Charlotte Tilbury</span>
-                <span class="brand-badge">FIFA</span>
-                <span class="brand-badge">Rotana</span>
-                <span class="brand-badge">Nine West Group</span>
-                <span class="brand-badge">M&amp;C Saatchi MENA</span>
+                <img class="brand-logo hl" src="images/logo-pubg-mobile.svg" alt="PUBG Mobile">
+                <img class="brand-logo" src="images/logo-visit-qatar.svg" alt="Visit Qatar">
+                <img class="brand-logo" src="images/logo-charlotte-tilbury.svg" alt="Charlotte Tilbury">
+                <img class="brand-logo" src="images/logo-fifa.svg" alt="FIFA">
+                <img class="brand-logo" src="images/logo-rotana.svg" alt="Rotana">
+                <img class="brand-logo" src="images/logo-nine-west.svg" alt="Nine West Group">
+                <img class="brand-logo" src="images/logo-mc-saatchi.svg" alt="M&amp;C Saatchi MENA">
             </div>
             <p class="brands-langs rev d2">Arabic &nbsp;·&nbsp; English &nbsp;·&nbsp; French</p>
         </div>
