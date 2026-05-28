@@ -284,7 +284,7 @@
         }
         @media (max-width:900px) { .stats-strip { grid-template-columns:repeat(2,1fr); } }
         .s-card {
-            background:var(--black); padding:30px 28px; text-align:center;
+            background:var(--black); padding:22px 24px; text-align:center;
             transition:background .3s, box-shadow .3s;
         }
         .s-card:hover { background:var(--black-2); box-shadow:0 0 40px rgba(45,212,191,.06); }
@@ -324,11 +324,11 @@
 
         /* FIRSTS */
         .firsts { background:var(--black); }
-        .firsts-hd { text-align:center; margin-bottom:36px; }
+        .firsts-hd { text-align:center; margin-bottom:24px; }
         .firsts-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
         @media (max-width:900px) { .firsts-grid { grid-template-columns:1fr; } }
         .f-card {
-            background:var(--black-3); padding:36px 40px;
+            background:var(--black-3); padding:28px 32px;
             position:relative; overflow:hidden; transition:background .4s, box-shadow .4s;
         }
         .f-card:hover { background:var(--black-4); box-shadow:0 8px 40px rgba(124,58,237,.1); }
@@ -476,8 +476,8 @@
 
         /* BRANDS */
         .brands { text-align:center; }
-        .brands-intro { font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--white-60); margin-bottom:44px; letter-spacing:.01em; }
-        .brands-groups { display:flex; flex-direction:column; gap:28px; }
+        .brands-intro { font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--white-60); margin-bottom:28px; letter-spacing:.01em; }
+        .brands-groups { display:flex; flex-direction:column; gap:18px; }
         .brands-group { text-align:center; }
         .brands-group-label { font-family:var(--sans); font-size:10px; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--white-30); margin-bottom:18px; }
         .brands-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:20px 40px; }
@@ -496,7 +496,7 @@
         /* PHILOSOPHY */
         .phil-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:0; }
         .phil-card {
-            padding:30px 36px; border:1px solid var(--border); border-radius:16px;
+            padding:24px 28px; border:1px solid var(--border); border-radius:16px;
             background:rgba(255,255,255,.02);
             transition:border-color .3s, background .3s, transform .3s;
         }
@@ -576,8 +576,8 @@
             opacity:0; transition:opacity .3s; text-decoration:none;
         }
         .yt-card:hover .yt-play { opacity:1; }
-        .yt-info { padding:24px 24px 28px; display:flex; flex-direction:column; flex:1; }
-        .yt-meta { display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
+        .yt-info { padding:18px 20px 22px; display:flex; flex-direction:column; flex:1; }
+        .yt-meta { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
         .yt-tag {
             font-size:9px; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
             color:var(--teal); padding:3px 10px; border:1px solid rgba(45,212,191,.3);
@@ -591,12 +591,12 @@
         /* SPOTIFY EQUAL BANNER */
         .equal-banner {
             display:grid; grid-template-columns:1fr 1.4fr;
-            background:var(--black-4); margin-top:48px; overflow:hidden;
+            background:var(--black-4); margin-top:32px; overflow:hidden;
             border:1px solid rgba(29,185,84,.2);
         }
-        .equal-img { position:relative; min-height:320px; overflow:hidden; }
+        .equal-img { position:relative; min-height:260px; overflow:hidden; }
         .equal-img img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
-        .equal-content { padding:40px 40px; display:flex; flex-direction:column; justify-content:center; }
+        .equal-content { padding:28px 32px; display:flex; flex-direction:column; justify-content:center; }
         .equal-eyebrow {
             font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
             color:#1db954; margin-bottom:18px;
@@ -605,7 +605,8 @@
         .equal-desc { font-size:13.5px; color:var(--white-60); line-height:1.8; }
 
         /* INSTAGRAM GRID */
-        .ig-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; margin-top:28px; }
+        .ig-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:16px; }
+        @media (max-width:900px) { .ig-grid { grid-template-columns:repeat(2,1fr); } }
         .ig-card {
             background:var(--black-3); position:relative;
             transition:background .35s, transform .35s, box-shadow .35s; overflow:hidden;
@@ -630,11 +631,11 @@
         .ig-thumb { position:relative; overflow:hidden; height:300px; background:var(--black-4); }
         .ig-thumb img { width:100%; height:100%; object-fit:cover; object-position:center center; transition:transform .5s; display:block; }
         .ig-card:hover .ig-thumb img { transform:scale(1.04); }
-        .ig-content { padding:20px 24px 28px; display:flex; flex-direction:column; }
-        .ig-header { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+        .ig-content { padding:16px 20px 22px; display:flex; flex-direction:column; }
+        .ig-header { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
         .ig-icon { width:20px; height:20px; flex-shrink:0; color:var(--teal); }
         .ig-type { font-size:10px; font-weight:500; letter-spacing:.15em; text-transform:uppercase; color:var(--white-30); }
-        .ig-caption { font-size:13px; color:var(--white-60); line-height:1.75; flex:1; margin-bottom:20px; }
+        .ig-caption { font-size:13px; color:var(--white-60); line-height:1.75; flex:1; margin-bottom:14px; }
         .ig-btn {
             display:inline-block; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
             color:var(--teal); text-decoration:none;
@@ -733,7 +734,7 @@
         .known-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
         @media (max-width:900px) { .known-grid { grid-template-columns:1fr; } }
         .known-card {
-            background:var(--black-3); padding:40px 44px; position:relative;
+            background:var(--black-3); padding:32px 36px; position:relative;
             border-top:2px solid transparent;
             transition:background .4s, border-color .4s, transform .4s;
         }
@@ -762,7 +763,7 @@
         .cs-intro strong { color:var(--white); font-weight:500; }
         .cs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
         @media (max-width:900px) { .cs-grid { grid-template-columns:1fr; } }
-        .cs-block { background:var(--black-3); padding:36px 32px; }
+        .cs-block { background:var(--black-3); padding:28px 24px; }
         .cs-label {
             font-size:9px; font-weight:700; letter-spacing:.28em; text-transform:uppercase;
             color:var(--purple); margin-bottom:18px;
@@ -884,7 +885,7 @@
     <!-- WORK SHOWCASE -->
     <section class="sec work-showcase" id="showcase">
         <div class="wrap">
-            <div class="rev" style="margin-bottom:44px;">
+            <div class="rev" style="margin-bottom:32px;">
                 <p class="eyebrow">Campaigns Portfolio</p>
                 <h2 class="h-display">Work Showcase</h2>
                 <div class="bar"></div>
@@ -892,7 +893,7 @@
             </div>
 
             <!-- VISIT QATAR -->
-            <div style="margin-bottom:48px;">
+            <div style="margin-bottom:32px;">
                 <div class="rev">
                     <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap;">
                         <h3 class="showcase-sub-title">Visit Qatar</h3>
@@ -965,11 +966,80 @@
                             <a href="https://www.instagram.com/reel/DKFn1ebtbcy/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
                         </div>
                     </div>
+                    <div class="ig-card rev">
+                        <div class="ig-thumb"><img src="images/ig-vq-new.jpg" alt="Qanat Quartier at The Pearl - Doha Qatar" loading="lazy" style="object-position:center 38%;"></div>
+                        <div class="ig-content">
+                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Destination · Reel</span></div>
+                            <p class="ig-caption">Qatar's Qanat Quartier at The Pearl: destination content capturing the Venice-inspired waterways that position Doha as one of the region's most distinct travel experiences.</p>
+                            <a href="https://www.instagram.com/reel/DN8huMjDP7c/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QATAR TOURISM -->
+            <div style="margin-bottom:32px;">
+                <div class="rev">
+                    <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap;">
+                        <h3 class="showcase-sub-title">Qatar Tourism</h3>
+                        <span class="role-tag">Account Director</span>
+                    </div>
+                    <p class="showcase-sub-desc">Managed Qatar Tourism's B2B partnerships, trade show presence, and official sector events: from international expos to government-level brand signings. The business side of Visit Qatar, executed at scale.</p>
+                </div>
+                <div class="ig-grid">
+                    <div class="ig-card rev">
+                        <div class="ig-thumb"><img src="images/expo-1.jpg" alt="Qatar Tourism Awards Ceremony" loading="lazy" style="object-position:center 65%;"></div>
+                        <div class="ig-content">
+                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Event Strategy · Reel</span></div>
+                            <p class="ig-caption">Qatar Tourism Awards: the annual ceremony recognizing excellence across Qatar's tourism sector. Led the social media strategy and content production for the full event.</p>
+                            <a href="https://www.instagram.com/reel/DRRgzN2jMFQ/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
+                        </div>
+                    </div>
+                    <div class="ig-card rev d1">
+                        <div class="ig-thumb"><img src="images/expo-2.jpg" alt="Qatar Tourism x Qatar Airways Partnership" loading="lazy" style="object-position:center 42%;"></div>
+                        <div class="ig-content">
+                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Brand Partnership · Reel</span></div>
+                            <p class="ig-caption">Qatar Tourism × Qatar Airways "Made For You": a co-branded campaign aligning both entities to drive inbound travel. Managed the content strategy and delivery across digital platforms.</p>
+                            <a href="https://www.instagram.com/reel/DMK28A4Ms_R/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
+                        </div>
+                    </div>
+                    <div class="ig-card rev">
+                        <div class="ig-thumb"><img src="images/expo-3.jpg" alt="Project Qatar 2025 Exhibition" loading="lazy" style="object-position:center 52%;"></div>
+                        <div class="ig-content">
+                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Exhibition · Reel</span></div>
+                            <p class="ig-caption">Project Qatar 2025. Qatar's premier construction and smart manufacturing expo. Managed Qatar Tourism's presence, content strategy, and on-ground social coverage at&nbsp;the show.</p>
+                            <a href="https://www.instagram.com/reel/DKKSzeSs10m/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
+                        </div>
+                    </div>
+                    <div class="ig-card rev d1">
+                        <div class="ig-thumb"><img src="images/expo-4.jpg" alt="IMEX Frankfurt - Visit Qatar Stand" loading="lazy" style="object-position:center 15%;"></div>
+                        <div class="ig-content">
+                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Trade Show · Reel</span></div>
+                            <p class="ig-caption">Visit Qatar at IMEX Frankfurt: one of the world's leading meetings industry trade shows. Represented Qatar on the international stage, managing the pavilion's brand presence and&nbsp;social output.</p>
+                            <a href="https://www.instagram.com/reel/DKHPdIZMs67/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
+                        </div>
+                    </div>
+                    <div class="ig-card rev">
+                        <div class="ig-thumb"><img src="images/expo-5.jpg" alt="Taste of Qatar - Qatar Tourism Pavilion" loading="lazy" style="object-position:center 46%;"></div>
+                        <div class="ig-content">
+                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Exhibition · Reel</span></div>
+                            <p class="ig-caption">Taste of Qatar by Qatar Tourism: a branded culinary and culture pavilion showcasing Qatar's hospitality offer to international visitors and&nbsp;industry delegates.</p>
+                            <a href="https://www.instagram.com/reel/DQb0A7eDAZi/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
+                        </div>
+                    </div>
+                    <div class="ig-card rev d1">
+                        <div class="ig-thumb"><img src="images/expo-6.jpg" alt="Visit Qatar wins Gold at New York Festivals TV & Film Awards" loading="lazy" style="object-position:center 22%;"></div>
+                        <div class="ig-content">
+                            <div class="ig-header"><svg class="ig-icon" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span class="ig-type">Award · Campaign</span></div>
+                            <p class="ig-caption">Visit Qatar wins Gold at the New York Festivals TV &amp; Film Awards. International recognition for the campaign strategy and content I led for the account.</p>
+                            <a href="https://www.instagram.com/p/DLu25v9IzpY/" target="_blank" rel="noopener" class="ig-btn">View on Instagram ↗</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- ENTERTAINMENT & LIVE EVENTS -->
-            <div style="margin-bottom:48px;">
+            <div style="margin-bottom:32px;">
                 <div class="rev">
                     <div style="display:flex;align-items:center;gap:16px;margin-bottom:10px;flex-wrap:wrap;">
                         <h3 class="showcase-sub-title">Entertainment &amp; Live Events</h3>
@@ -1109,9 +1179,9 @@
                 </div>
                 <div class="known-card rev d1">
                     <div class="known-num">02</div>
-                    <div class="known-stat">602M+</div>
-                    <h3 class="known-title">I scale numbers that headline.</h3>
-                    <p class="known-body">602M+ video views. 100M+ campaign reach. Built through platform partnerships with Meta, YouTube, and&nbsp;TikTok, and a strategy designed to scale from day one.</p>
+                    <div class="known-stat">0</div>
+                    <h3 class="known-title">Every campaign built from zero.</h3>
+                    <p class="known-body">No templates. No recycled playbooks. Each brief starts with the brand and ends with a strategy built for that specific moment, audience, and&nbsp;platform.</p>
                 </div>
                 <div class="known-card rev d2">
                     <div class="known-num">03</div>
@@ -1161,7 +1231,7 @@
     <!-- FLAGSHIP CASE STUDY -->
     <section class="sec case-study" id="case-study">
         <div class="wrap">
-            <div class="rev" style="margin-bottom:44px;">
+            <div class="rev" style="margin-bottom:32px;">
                 <p class="eyebrow">Flagship Case Study</p>
                 <h2 class="h-display">Visit Qatar</h2>
                 <div class="bar"></div>
@@ -1349,6 +1419,9 @@
                     <div class="brands-row">
                         <img class="brand-logo" src="images/logo-pubg-mobile.svg" alt="PUBG Mobile">
                         <img class="brand-logo" src="images/logo-visit-qatar.svg" alt="Visit Qatar">
+                        <img class="brand-logo" src="images/logo-qatar-tourism.svg" alt="Qatar Tourism">
+                        <img class="brand-logo" src="images/logo-qatar-airways.svg" alt="Qatar Airways">
+                        <img class="brand-logo" src="images/logo-qatar-calendar.svg" alt="Qatar Calendar">
                         <img class="brand-logo" src="images/logo-charlotte-tilbury.svg" alt="Charlotte Tilbury">
                         <img class="brand-logo" src="images/logo-fifa.svg" alt="FIFA">
                         <img class="brand-logo" src="images/logo-rotana.svg" alt="Rotana">
