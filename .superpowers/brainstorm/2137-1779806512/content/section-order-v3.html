@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Section Order</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #080810; color: #F0F0FF; font-family: 'Inter', system-ui, sans-serif; padding: 40px 32px; min-height: 100vh; }
+  h2 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .subtitle { font-size: 14px; color: rgba(240,240,255,0.5); margin-bottom: 32px; line-height: 1.6; max-width: 620px; }
+  .flows { display: flex; gap: 20px; flex-wrap: wrap; }
+  .flow-option { flex: 1; min-width: 220px; border: 2px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; cursor: pointer; background: rgba(255,255,255,0.03); transition: all .2s; }
+  .flow-option:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15); }
+  .flow-option.selected { border-color: #2DD4BF; background: rgba(45,212,191,0.07); }
+  .opt-letter { display: inline-block; width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.08); text-align: center; line-height: 28px; font-size: 13px; font-weight: 700; color: rgba(240,240,255,0.6); margin-bottom: 12px; }
+  .flow-option.selected .opt-letter { background: #2DD4BF; color: #080810; }
+  .opt-title { font-size: 16px; font-weight: 700; color: #2DD4BF; margin-bottom: 4px; }
+  .opt-tagline { font-size: 12px; color: rgba(240,240,255,0.45); margin-bottom: 16px; line-height: 1.5; }
+  .step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 9px; }
+  .step-num { width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; color: rgba(240,240,255,0.4); margin-top: 2px; }
+  .step-num.visual { background: rgba(45,212,191,0.2); color: #2DD4BF; }
+  .step-num.text { background: rgba(255,255,255,0.07); color: rgba(240,240,255,0.4); }
+  .step-label { font-size: 13px; color: rgba(240,240,255,0.85); line-height: 1.4; }
+  .step-label small { display: block; font-size: 11px; color: rgba(240,240,255,0.35); margin-top: 1px; }
+  .step-label strong { color: #F0F0FF; }
+  .badge { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; border-radius: 3px; padding: 1px 5px; margin-left: 5px; vertical-align: middle; }
+  .badge-teal { background: #2DD4BF; color: #080810; }
+  .badge-purple { background: #7C3AED; color: #fff; }
+  .badge-gray { background: rgba(255,255,255,0.15); color: rgba(240,240,255,0.7); }
+  hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 14px 0; }
+  .footer-note { font-size: 11px; color: rgba(240,240,255,0.3); line-height: 1.5; }
+  .rec { margin-top: 28px; padding: 16px 20px; border-radius: 10px; background: rgba(45,212,191,0.07); border: 1px solid rgba(45,212,191,0.2); font-size: 13px; color: rgba(240,240,255,0.7); line-height: 1.6; }
+  .rec strong { color: #2DD4BF; }
+  .legend { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: rgba(240,240,255,0.4); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .scroll-bar { display: flex; gap: 3px; margin-bottom: 18px; }
+  .scroll-seg { height: 6px; border-radius: 3px; flex: 1; }
+  .seg-visual { background: #2DD4BF; }
+  .seg-text { background: rgba(255,255,255,0.12); }
+  .scroll-label { font-size: 10px; color: rgba(240,240,255,0.3); margin-bottom: 6px; letter-spacing: .08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<h2>Recruiter's scroll — what do they see first?</h2>
+<p class="subtitle">You're right. A recruiter who doesn't know you opens this and needs to be pulled in visually within the first two scrolls. Text and numbers alone won't do that. The Work Showcase — thumbnails, links, real campaigns — is the most visually compelling thing on the page.</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#2DD4BF;"></div> Visual / clickable</div>
+  <div class="legend-item"><div class="legend-dot" style="background:rgba(255,255,255,0.2);"></div> Text / numbers</div>
+</div>
+
+<div class="flows">
+
+  <div class="flow-option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="opt-letter">A</div>
+    <div class="opt-title">Current order</div>
+    <p class="opt-tagline">What a recruiter sees today</p>
+    <div class="scroll-label">Scroll experience</div>
+    <div class="scroll-bar">
+      <div class="scroll-seg seg-text" title="Hero"></div>
+      <div class="scroll-seg seg-text" title="Stats"></div>
+      <div class="scroll-seg seg-text" title="Known For"></div>
+      <div class="scroll-seg seg-text" title="Case Study"></div>
+      <div class="scroll-seg seg-visual" title="Showcase"></div>
+      <div class="scroll-seg seg-text" title="Firsts"></div>
+      <div class="scroll-seg seg-text" title="Approach"></div>
+      <div class="scroll-seg seg-text" title="Skills"></div>
+    </div>
+    <div class="step"><div class="step-num text">1</div><div class="step-label">Hero</div></div>
+    <div class="step"><div class="step-num text">2</div><div class="step-label">Stats <small>numbers, no visuals</small></div></div>
+    <div class="step"><div class="step-num text">3</div><div class="step-label">What I'm Known For <small>text claims</small></div></div>
+    <div class="step"><div class="step-num text">4</div><div class="step-label">Case Study <small>long text block</small></div></div>
+    <div class="step"><div class="step-num visual">5</div><div class="step-label"><strong>Work Showcase</strong> <small>first visual — but by now many have left</small></div></div>
+    <div class="step"><div class="step-num text">6</div><div class="step-label">Industry Firsts</div></div>
+    <div class="step"><div class="step-num text">7</div><div class="step-label">The Approach → Skills → Brands</div></div>
+    <hr>
+    <p class="footer-note">Problem: 4 text sections before a single image or link</p>
+  </div>
+
+  <div class="flow-option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="opt-letter">B</div>
+    <div class="opt-title">Work First ★</div>
+    <p class="opt-tagline">Show the work immediately — then let the text sections explain and back it up</p>
+    <div class="scroll-label">Scroll experience</div>
+    <div class="scroll-bar">
+      <div class="scroll-seg seg-text" title="Hero"></div>
+      <div class="scroll-seg seg-visual" title="Showcase"></div>
+      <div class="scroll-seg seg-text" title="Stats"></div>
+      <div class="scroll-seg seg-text" title="Known For"></div>
+      <div class="scroll-seg seg-text" title="Firsts"></div>
+      <div class="scroll-seg seg-text" title="Case Study"></div>
+      <div class="scroll-seg seg-text" title="Approach"></div>
+      <div class="scroll-seg seg-text" title="Skills"></div>
+    </div>
+    <div class="step"><div class="step-num text">1</div><div class="step-label">Hero <small>who you are</small></div></div>
+    <div class="step"><div class="step-num visual">2</div><div class="step-label"><strong>Work Showcase</strong> <span class="badge badge-teal">moved to #2</span><small>First scroll = thumbnails, links, real campaigns</small></div></div>
+    <div class="step"><div class="step-num text">3</div><div class="step-label">Stats <small>now the numbers have context from what they just saw</small></div></div>
+    <div class="step"><div class="step-num text">4</div><div class="step-label">What I'm Known For</div></div>
+    <div class="step"><div class="step-num text">5</div><div class="step-label">Industry Firsts</div></div>
+    <div class="step"><div class="step-num text">6</div><div class="step-label">Case Study</div></div>
+    <div class="step"><div class="step-num text">7</div><div class="step-label">The Approach → Skills → Brands → Contact</div></div>
+    <hr>
+    <p class="footer-note">Numbers land harder after the recruiter has seen the actual work</p>
+  </div>
+
+  <div class="flow-option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="opt-letter">C</div>
+    <div class="opt-title">Hook + Work</div>
+    <p class="opt-tagline">Stats stay second as a quick hook, Showcase third — still visual within 2 scrolls</p>
+    <div class="scroll-label">Scroll experience</div>
+    <div class="scroll-bar">
+      <div class="scroll-seg seg-text" title="Hero"></div>
+      <div class="scroll-seg seg-text" title="Stats"></div>
+      <div class="scroll-seg seg-visual" title="Showcase"></div>
+      <div class="scroll-seg seg-text" title="Known For"></div>
+      <div class="scroll-seg seg-text" title="Firsts"></div>
+      <div class="scroll-seg seg-text" title="Case Study"></div>
+      <div class="scroll-seg seg-text" title="Approach"></div>
+      <div class="scroll-seg seg-text" title="Skills"></div>
+    </div>
+    <div class="step"><div class="step-num text">1</div><div class="step-label">Hero</div></div>
+    <div class="step"><div class="step-num text">2</div><div class="step-label">Stats <small>fast credibility — 602M views, 100M reach</small></div></div>
+    <div class="step"><div class="step-num visual">3</div><div class="step-label"><strong>Work Showcase</strong> <span class="badge badge-purple">moved to #3</span><small>Visual payoff right after the numbers</small></div></div>
+    <div class="step"><div class="step-num text">4</div><div class="step-label">What I'm Known For</div></div>
+    <div class="step"><div class="step-num text">5</div><div class="step-label">Industry Firsts</div></div>
+    <div class="step"><div class="step-num text">6</div><div class="step-label">Case Study</div></div>
+    <div class="step"><div class="step-num text">7</div><div class="step-label">The Approach → Skills → Brands → Contact</div></div>
+    <hr>
+    <p class="footer-note">Numbers set the stage, then the work delivers immediately after</p>
+  </div>
+
+</div>
+
+<div class="rec">
+  <strong>Revised recommendation: Option B or C.</strong> Both get the Work Showcase into the recruiter's view within the first 1–2 scrolls — before they've had a chance to bounce. The key insight you raised is right: stats and text don't hold attention the same way a grid of campaign thumbnails does. Option B is bolder (work before numbers). Option C is the middle ground (numbers first as a 5-second hook, then work).
+</div>
+
+</body>
+</html>

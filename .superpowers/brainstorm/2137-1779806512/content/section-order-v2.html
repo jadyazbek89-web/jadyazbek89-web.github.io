@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Section Order</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #080810; color: #F0F0FF; font-family: 'Inter', system-ui, sans-serif; padding: 40px 32px; min-height: 100vh; }
+  h2 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 8px; color: #F0F0FF; }
+  .subtitle { font-size: 14px; color: rgba(240,240,255,0.5); margin-bottom: 32px; line-height: 1.5; }
+  .flows { display: flex; gap: 20px; flex-wrap: wrap; }
+  .flow-option { flex: 1; min-width: 220px; border: 2px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; cursor: pointer; background: rgba(255,255,255,0.03); transition: all .2s; }
+  .flow-option:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15); }
+  .flow-option.selected { border-color: #2DD4BF; background: rgba(45,212,191,0.07); }
+  .opt-letter { display: inline-block; width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.08); text-align: center; line-height: 28px; font-size: 13px; font-weight: 700; color: rgba(240,240,255,0.6); margin-bottom: 12px; }
+  .flow-option.selected .opt-letter { background: #2DD4BF; color: #080810; }
+  .opt-title { font-size: 16px; font-weight: 700; color: #2DD4BF; margin-bottom: 4px; }
+  .opt-tagline { font-size: 12px; color: rgba(240,240,255,0.45); margin-bottom: 16px; line-height: 1.5; }
+  .step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 9px; }
+  .step-num { width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; color: rgba(240,240,255,0.4); margin-top: 1px; }
+  .step-label { font-size: 13px; color: rgba(240,240,255,0.85); line-height: 1.4; }
+  .step-label small { display: block; font-size: 11px; color: rgba(240,240,255,0.35); margin-top: 1px; }
+  .step-label strong { color: #F0F0FF; }
+  .badge { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; border-radius: 3px; padding: 1px 5px; margin-left: 5px; vertical-align: middle; }
+  .badge-teal { background: #2DD4BF; color: #080810; }
+  .badge-purple { background: #7C3AED; color: #fff; }
+  hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 14px 0; }
+  .footer-note { font-size: 11px; color: rgba(240,240,255,0.3); line-height: 1.5; }
+  .rec { margin-top: 28px; padding: 16px 20px; border-radius: 10px; background: rgba(45,212,191,0.07); border: 1px solid rgba(45,212,191,0.2); font-size: 13px; color: rgba(240,240,255,0.7); line-height: 1.6; }
+  .rec strong { color: #2DD4BF; }
+</style>
+</head>
+<body>
+<h2>Section Order — Which flow feels right?</h2>
+<p class="subtitle">Goal: hook recruiters fast, get them to your actual work (links) before they lose interest</p>
+
+<div class="flows">
+
+  <div class="flow-option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="opt-letter">A</div>
+    <div class="opt-title">Links First</div>
+    <p class="opt-tagline">Showcase moves right after stats — real work visible in 10 seconds of scrolling</p>
+    <div class="step"><div class="step-num">1</div><div class="step-label">Hero</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-label">Stats</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-label"><strong>Work Showcase</strong> <span class="badge badge-teal">moved up</span><small>YouTube + Instagram links hit immediately</small></div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-label">What I'm Known For</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-label">Industry Firsts</div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-label">Case Study</div></div>
+    <div class="step"><div class="step-num">7</div><div class="step-label">The Approach → Skills → Brands → Contact</div></div>
+    <hr>
+    <p class="footer-note">For: fast-scrolling recruiters who want to see proof before reading anything</p>
+  </div>
+
+  <div class="flow-option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="opt-letter">B</div>
+    <div class="opt-title">Build Then Prove ★</div>
+    <p class="opt-tagline">Firsts moves right after Known For — claims are instantly verified, then Showcase is the payoff</p>
+    <div class="step"><div class="step-num">1</div><div class="step-label">Hero</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-label">Stats</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-label">What I'm Known For</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-label"><strong>Industry Firsts</strong> <span class="badge badge-purple">moved up</span><small>Instantly backs up the Known For claims</small></div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-label"><strong>Work Showcase</strong> <span class="badge badge-purple">moved up</span><small>Now the payoff — click the links</small></div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-label">Case Study</div></div>
+    <div class="step"><div class="step-num">7</div><div class="step-label">The Approach → Skills → Brands → Contact</div></div>
+    <hr>
+    <p class="footer-note">For: engaged recruiters who read — builds momentum before the links</p>
+  </div>
+
+  <div class="flow-option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="opt-letter">C</div>
+    <div class="opt-title">Minimal Swap</div>
+    <p class="opt-tagline">Keep everything in place — just swap Approach and Industry Firsts at the end</p>
+    <div class="step"><div class="step-num">1</div><div class="step-label">Hero</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-label">Stats</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-label">What I'm Known For</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-label">Case Study</div></div>
+    <div class="step"><div class="step-num">5</div><div class="step-label">Work Showcase</div></div>
+    <div class="step"><div class="step-num">6</div><div class="step-label"><strong>The Approach</strong> <span class="badge badge-teal">swapped</span></div></div>
+    <div class="step"><div class="step-num">7</div><div class="step-label"><strong>Industry Firsts</strong> <span class="badge badge-teal">swapped</span></div></div>
+    <div class="step"><div class="step-num">8</div><div class="step-label">Skills → Brands → Contact</div></div>
+    <hr>
+    <p class="footer-note">For: if you just want to answer the Firsts/Approach question with minimal disruption</p>
+  </div>
+
+</div>
+
+<div class="rec">
+  <strong>My pick: Option B.</strong> It tells a story — "here's what I've done → here's proof → here's the actual work." Firsts right after Known For makes your claims feel instantly verified before anyone even clicks a link. The Showcase then becomes a reward for the scroll, not something buried after a wall of text.
+</div>
+</body>
+</html>
